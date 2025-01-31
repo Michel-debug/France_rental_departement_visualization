@@ -1,0 +1,140 @@
+[
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "identifiant interne",
+      "libellé",
+      "type d'établissement",
+      "secteur d'établissement",
+      "géolocalisation",
+      "Commune",
+      "Unité urbaine",
+      "Code commune",
+      "Effectifs d'étudiants inscrits 2010-11",
+      "Effectifs d'étudiants inscrits 2011-12",
+      "Effectifs d'étudiants inscrits 2012-13",
+      "Effectifs d'étudiants inscrits 2013-14",
+      "Effectifs d'étudiants inscrits 2014-15",
+      "Effectifs d'étudiants inscrits 2015-16",
+      "Effectifs d'étudiants inscrits 2016-17",
+      "Effectifs d'étudiants inscrits 2017-18",
+      "Effectifs d'étudiants inscrits 2018-19",
+      "Effectifs d'étudiants inscrits 2019-20",
+      "Effectifs d'étudiants inscrits 2020-21",
+      "Effectifs d'étudiants inscrits 2021-22",
+      "Effectifs d'étudiants inscrits 2022-23"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "géolocalisation",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ", ",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column géolocalisation by separator"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "géolocalisation 1",
+    "newColumnName": "Y",
+    "description": "Rename column géolocalisation 1 to Y"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "géolocalisation 2",
+    "newColumnName": "X",
+    "description": "Rename column géolocalisation 2 to X"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "identifiant interne",
+      "libellé",
+      "type d'établissement",
+      "secteur d'établissement",
+      "X",
+      "Y",
+      "Commune",
+      "Unité urbaine",
+      "Code commune",
+      "Effectifs d'étudiants inscrits 2010-11",
+      "Effectifs d'étudiants inscrits 2011-12",
+      "Effectifs d'étudiants inscrits 2012-13",
+      "Effectifs d'étudiants inscrits 2013-14",
+      "Effectifs d'étudiants inscrits 2014-15",
+      "Effectifs d'étudiants inscrits 2015-16",
+      "Effectifs d'étudiants inscrits 2016-17",
+      "Effectifs d'étudiants inscrits 2017-18",
+      "Effectifs d'étudiants inscrits 2018-19",
+      "Effectifs d'étudiants inscrits 2019-20",
+      "Effectifs d'étudiants inscrits 2020-21",
+      "Effectifs d'étudiants inscrits 2021-22",
+      "Effectifs d'étudiants inscrits 2022-23"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "identifiant interne",
+      "libellé",
+      "type d'établissement",
+      "secteur d'établissement",
+      "X",
+      "Y",
+      "Commune",
+      "Unité urbaine",
+      "Code commune"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unité urbaine",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Marseille-Aix-en-Provence"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Marseille"
+      }
+    ],
+    "description": "Mass edit cells in column Unité urbaine"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "Code commune",
+          "expression": "value",
+          "columnName": "Code commune",
+          "from": 6000,
+          "to": 99000,
+          "selectNumeric": false,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  }
+]
