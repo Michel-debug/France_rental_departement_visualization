@@ -352,5 +352,5 @@ function draw() {
 
   // 绘制图例
   drawLegend();
-
+  saveCanvas('mySketchScreenshot', 'jpg');
 }
