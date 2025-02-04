@@ -1,0 +1,1970 @@
+[
+    {
+        "name": "Centrale M\u00e9diterran\u00e9e",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 5.43829,
+        "Y": 43.34136,
+        "departement_code": "13"
+    },
+    {
+        "name": "\u00c9cole d'ing\u00e9nieurs de Purpan",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 1.400296,
+        "Y": 43.601838,
+        "departement_code": "31"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure de m\u00e9canique et d'a\u00e9rotechnique de Poitiers",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 0.362013,
+        "Y": 46.661,
+        "departement_code": "86"
+    },
+    {
+        "name": "\u00c9cole normale sup\u00e9rieure de Lyon",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.83376,
+        "Y": 45.7337,
+        "departement_code": "69"
+    },
+    {
+        "name": "Institut sup\u00e9rieur du b\u00e2timent et des travaux publics",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 5.4373043776,
+        "Y": 43.2475198813,
+        "departement_code": "13"
+    },
+    {
+        "name": "Universit\u00e9 de Perpignan Via Domitia",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.89854,
+        "Y": 42.6844,
+        "departement_code": "66"
+    },
+    {
+        "name": "ECAM-EPMI",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.074459,
+        "Y": 49.031763,
+        "departement_code": "95"
+    },
+    {
+        "name": "\u00c9cole nationale des sciences g\u00e9ographiques",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.58736,
+        "Y": 48.84105,
+        "departement_code": "77"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure de techniques avanc\u00e9es Bretagne",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -4.472605,
+        "Y": 48.418823,
+        "departement_code": "29"
+    },
+    {
+        "name": "Ecole Nationale Sup\u00e9rieure des Beaux-Arts de Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.334499,
+        "Y": 48.856491,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure maritime",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 0.12238,
+        "Y": 49.48841,
+        "departement_code": "76"
+    },
+    {
+        "name": "ESIEE Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.58392,
+        "Y": 48.83999,
+        "departement_code": "93"
+    },
+    {
+        "name": "Institut catholique de Lyon",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 4.82637,
+        "Y": 45.74658,
+        "departement_code": "69"
+    },
+    {
+        "name": "IAE Paris - Sorbonne Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.348565,
+        "Y": 48.83839,
+        "departement_code": "75"
+    },
+    {
+        "name": "Sciences Po Lyon",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.8354,
+        "Y": 45.7471,
+        "departement_code": "69"
+    },
+    {
+        "name": "Institut sup\u00e9rieur du commerce de Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.301231,
+        "Y": 48.892604,
+        "departement_code": "75"
+    },
+    {
+        "name": "Universit\u00e9 de Caen Normandie",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.36382,
+        "Y": 49.18884,
+        "departement_code": "14"
+    },
+    {
+        "name": "Universit\u00e9 Grenoble Alpes",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 5.76726,
+        "Y": 45.19159,
+        "departement_code": "38"
+    },
+    {
+        "name": "Universit\u00e9 Lumi\u00e8re - Lyon 2",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.8371815681,
+        "Y": 45.7506137532,
+        "departement_code": "69"
+    },
+    {
+        "name": "Universit\u00e9 de Mayotte",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 45.18741,
+        "Y": -12.84547,
+        "departement_code": "97"
+    },
+    {
+        "name": "\u00c9cole de management de Normandie",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 0.12522,
+        "Y": 49.48939,
+        "departement_code": "76"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'architecture de Normandie",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.1373,
+        "Y": 49.43767,
+        "departement_code": "76"
+    },
+    {
+        "name": "BUILDERS \u00c9cole d'ing\u00e9nieurs",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.366436,
+        "Y": 49.2163,
+        "departement_code": "14"
+    },
+    {
+        "name": "Sciences Po Aix",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 5.44663,
+        "Y": 43.53146,
+        "departement_code": "13"
+    },
+    {
+        "name": "Sciences Po Bordeaux",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.61409,
+        "Y": 44.79886,
+        "departement_code": "33"
+    },
+    {
+        "name": "Institut national du sport, de l'expertise et de la performance",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.4541032314,
+        "Y": 48.8334952216,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut polytechnique de Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.21022,
+        "Y": 48.71317,
+        "departement_code": "91"
+    },
+    {
+        "name": "P\u00f4le sup\u00e9rieur d'enseignement artistique Paris - Boulogne-Billancourt",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.320699,
+        "Y": 48.878516,
+        "departement_code": "75"
+    },
+    {
+        "name": "TBS Education",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 1.429964,
+        "Y": 43.610775,
+        "departement_code": "31"
+    },
+    {
+        "name": "Universit\u00e9 de Poitiers",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 0.34601,
+        "Y": 46.58596,
+        "departement_code": "86"
+    },
+    {
+        "name": "Universit\u00e9 de Toulon",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 6.01684,
+        "Y": 43.1369,
+        "departement_code": "83"
+    },
+    {
+        "name": "\u00c9cole sp\u00e9ciale d'architecture",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.330967,
+        "Y": 48.837534,
+        "departement_code": "75"
+    },
+    {
+        "name": "Universit\u00e9 de Rennes",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -1.636424,
+        "Y": 48.114339,
+        "departement_code": "35"
+    },
+    {
+        "name": "Aix-Marseille Universit\u00e9",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 5.35781,
+        "Y": 43.2935,
+        "departement_code": "13"
+    },
+    {
+        "name": "\u00c9cole d'ing\u00e9nieurs des sciences a\u00e9rospatiales",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.777097,
+        "Y": 44.800616,
+        "departement_code": "33"
+    },
+    {
+        "name": "\u00c9cole d'ing\u00e9nieurs en g\u00e9nie des syst\u00e8mes industriels",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.15462,
+        "Y": 46.13977,
+        "departement_code": "17"
+    },
+    {
+        "name": "\u00c9cole du Louvre",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.33094,
+        "Y": 48.86091,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole des ponts ParisTech",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.58822,
+        "Y": 48.8411,
+        "departement_code": "77"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'architecture de Paris-Malaquais",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.3335433006,
+        "Y": 48.8566999327,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'architecture de Toulouse",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.397345,
+        "Y": 43.579717,
+        "departement_code": "31"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure des arts d\u00e9coratifs",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.34466,
+        "Y": 48.84278,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure angevine en informatique et productique",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.4974532127,
+        "Y": 47.4635571062,
+        "departement_code": "49"
+    },
+    {
+        "name": "Facult\u00e9s Libres de Philosophie et de Psychologie",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.33569,
+        "Y": 48.838,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut national des sciences appliqu\u00e9es de Strasbourg",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 7.764893,
+        "Y": 48.582266,
+        "departement_code": "67"
+    },
+    {
+        "name": "Universit\u00e9 de Guyane",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -52.30102,
+        "Y": 4.93174,
+        "departement_code": "97"
+    },
+    {
+        "name": "Universit\u00e9 de Montpellier",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 3.87347,
+        "Y": 43.61494,
+        "departement_code": "34"
+    },
+    {
+        "name": "Centre des hautes \u00e9tudes de la construction",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.3273098469,
+        "Y": 48.8007333278,
+        "departement_code": "94"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure de chimie physique \u00e9lectronique de Lyon",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 4.868928,
+        "Y": 45.78415,
+        "departement_code": "69"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'\u00e9lectronique de l'Ouest",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.550804,
+        "Y": 47.493396,
+        "departement_code": "49"
+    },
+    {
+        "name": "Institut national des langues et civilisations orientales",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.376024127,
+        "Y": 48.8272553344,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut sup\u00e9rieur d\u2019agriculture Rh\u00f4ne-Alpes",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 4.836377,
+        "Y": 45.727895,
+        "departement_code": "69"
+    },
+    {
+        "name": "Universit\u00e9 de Franche-Comt\u00e9",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 6.0227018595,
+        "Y": 47.2406486386,
+        "departement_code": "25"
+    },
+    {
+        "name": "Universit\u00e9 de Saint-\u00c9tienne",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.39264,
+        "Y": 45.42472,
+        "departement_code": "42"
+    },
+    {
+        "name": "Universit\u00e9 Paris 13",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.34071,
+        "Y": 48.95793,
+        "departement_code": "93"
+    },
+    {
+        "name": "Universit\u00e9 de Lille",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 3.07526,
+        "Y": 50.631794,
+        "departement_code": "59"
+    },
+    {
+        "name": "Coll\u00e8ge de France",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.34534,
+        "Y": 48.84879,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole centrale lyonnaise",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.76927,
+        "Y": 45.78299,
+        "departement_code": "69"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'ing\u00e9nieurs des travaux de la construction de Metz",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 6.21616,
+        "Y": 49.10042,
+        "departement_code": "57"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure des travaux publics de Cachan",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.3256,
+        "Y": 48.80497,
+        "departement_code": "94"
+    },
+    {
+        "name": "Institut europ\u00e9en d'administration des affaires",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.68529,
+        "Y": 48.4054,
+        "departement_code": "77"
+    },
+    {
+        "name": "Institut national sup\u00e9rieur de formation et de recherche pour l'\u00e9ducation inclusive",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.21315,
+        "Y": 48.86853,
+        "departement_code": "92"
+    },
+    {
+        "name": "Institut polytechnique des sciences avanc\u00e9es",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.393909,
+        "Y": 48.814007,
+        "departement_code": "94"
+    },
+    {
+        "name": "Institut polytechnique UniLaSalle",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.06792,
+        "Y": 49.45971,
+        "departement_code": "60"
+    },
+    {
+        "name": "Institut sup\u00e9rieur d'\u00e9lectronique de Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.32804,
+        "Y": 48.84531,
+        "departement_code": "75"
+    },
+    {
+        "name": "Montpellier Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 3.833542,
+        "Y": 43.621491,
+        "departement_code": "34"
+    },
+    {
+        "name": "Universit\u00e9 Claude Bernard - Lyon 1",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.86518,
+        "Y": 45.77962,
+        "departement_code": "69"
+    },
+    {
+        "name": "Universit\u00e9 Clermont Auvergne",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 3.08791,
+        "Y": 45.77056,
+        "departement_code": "63"
+    },
+    {
+        "name": "Conservatoire national sup\u00e9rieur de musique et de danse de Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.39076,
+        "Y": 48.88882,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut des sciences de la mati\u00e8re et du rayonnement",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.36735,
+        "Y": 49.21467,
+        "departement_code": "14"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure Louis Lumi\u00e8re",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.335657,
+        "Y": 48.922189,
+        "departement_code": "93"
+    },
+    {
+        "name": "\u00c9cole nationale v\u00e9t\u00e9rinaire de Toulouse",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.3819,
+        "Y": 43.6004,
+        "departement_code": "31"
+    },
+    {
+        "name": "\u00c9cole sp\u00e9ciale des travaux publics, du b\u00e2timent et de l'industrie",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.3285329342,
+        "Y": 48.7942207863,
+        "departement_code": "94"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'informatique \u00e9lectronique automatique",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.352616,
+        "Y": 48.83788,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut catholique de Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.32936,
+        "Y": 48.8483,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut r\u00e9gional du travail social de Champagne-Ardennes",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 4.002474,
+        "Y": 49.231082,
+        "departement_code": "51"
+    },
+    {
+        "name": "Institut Sup'Biotech de Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.35715,
+        "Y": 48.798078,
+        "departement_code": "94"
+    },
+    {
+        "name": "Sorbonne Universit\u00e9",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.3403829336,
+        "Y": 48.8511477376,
+        "departement_code": "75"
+    },
+    {
+        "name": "Universit\u00e9 de Limoges",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.25853,
+        "Y": 45.82604,
+        "departement_code": "87"
+    },
+    {
+        "name": "Universit\u00e9 de technologie de Troyes",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.06794,
+        "Y": 48.26834,
+        "departement_code": "10"
+    },
+    {
+        "name": "Universit\u00e9 Sorbonne Nouvelle - Paris 3",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.3970150948,
+        "Y": 48.8448818068,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'arts de Paris-Cergy",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.07795,
+        "Y": 49.03643,
+        "departement_code": "95"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure des sciences de l'information et des biblioth\u00e8ques",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.86229,
+        "Y": 45.7803,
+        "departement_code": "69"
+    },
+    {
+        "name": "\u00c9cole nationale v\u00e9t\u00e9rinaire d'Alfort",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.42152,
+        "Y": 48.81474,
+        "departement_code": "94"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d\u2019agriculture",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.543657,
+        "Y": 47.458784,
+        "departement_code": "49"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'art et de design de Reims",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.029733,
+        "Y": 49.252304,
+        "departement_code": "51"
+    },
+    {
+        "name": "Institut national des sciences et techniques nucl\u00e9aires",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.153444,
+        "Y": 48.723847,
+        "departement_code": "91"
+    },
+    {
+        "name": "Institut sup\u00e9rieur de l'\u00e9lectronique et du num\u00e9rique de Brest",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -4.495576,
+        "Y": 48.407023,
+        "departement_code": "29"
+    },
+    {
+        "name": "IPAG Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.331248,
+        "Y": 48.85497,
+        "departement_code": "75"
+    },
+    {
+        "name": "Mus\u00e9um national d'histoire naturelle",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.35616,
+        "Y": 48.84202,
+        "departement_code": "75"
+    },
+    {
+        "name": "Universit\u00e9 d'Avignon et des pays de Vaucluse",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.81789,
+        "Y": 43.95005,
+        "departement_code": "84"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure des arts et techniques du th\u00e9\u00e2tre",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.81132,
+        "Y": 45.75331,
+        "departement_code": "69"
+    },
+    {
+        "name": "Universit\u00e9 d'Artois",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.79112,
+        "Y": 50.2847,
+        "departement_code": "62"
+    },
+    {
+        "name": "Universit\u00e9 Bretagne Sud",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -3.39072,
+        "Y": 47.74618,
+        "departement_code": "56"
+    },
+    {
+        "name": "Universit\u00e9 Toulouse III - Paul Sabatier",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.46597,
+        "Y": 43.56287,
+        "departement_code": "31"
+    },
+    {
+        "name": "Universit\u00e9 du Littoral C\u00f4te d\u2019Opale",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.37183,
+        "Y": 51.039,
+        "departement_code": "59"
+    },
+    {
+        "name": "Universit\u00e9 Paris-Est Cr\u00e9teil",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.4437,
+        "Y": 48.78852,
+        "departement_code": "94"
+    },
+    {
+        "name": "Groupe \u00c9cole Sup\u00e9rieure de Commerce de Troyes",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 4.07982,
+        "Y": 48.28417,
+        "departement_code": "10"
+    },
+    {
+        "name": "Brest Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -4.5215645694,
+        "Y": 48.4059433199,
+        "departement_code": "29"
+    },
+    {
+        "name": "\u00c9cole sp\u00e9ciale militaire de Saint-Cyr",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -2.152742,
+        "Y": 47.94619,
+        "departement_code": "56"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure de fonderie et de forge",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.224391,
+        "Y": 48.822532,
+        "departement_code": "92"
+    },
+    {
+        "name": "Groupe Institut catholique d'arts et m\u00e9tiers",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.328815,
+        "Y": 48.87961,
+        "departement_code": "75"
+    },
+    {
+        "name": "ISMANS",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 0.157589,
+        "Y": 48.019687,
+        "departement_code": "72"
+    },
+    {
+        "name": "Institut sup\u00e9rieur international du parfum, de la cosm\u00e9tique et de l'aromatique alimentaire",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.141886,
+        "Y": 48.817017,
+        "departement_code": "78"
+    },
+    {
+        "name": "KEDGE Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.600218,
+        "Y": 44.79622,
+        "departement_code": "33"
+    },
+    {
+        "name": "Universit\u00e9 de la Polyn\u00e9sie Fran\u00e7aise",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -149.60684,
+        "Y": -17.57685,
+        "departement_code": "98"
+    },
+    {
+        "name": "Universit\u00e9 Paris Nanterre",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.2131550312,
+        "Y": 48.9032992525,
+        "departement_code": "92"
+    },
+    {
+        "name": "Universit\u00e9 Rennes 2",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -1.70333,
+        "Y": 48.12064,
+        "departement_code": "35"
+    },
+    {
+        "name": "\u00c9cole des hautes \u00e9tudes commerciales de Paris",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.16757,
+        "Y": 48.75673,
+        "departement_code": "78"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure des sciences \u00e9conomiques et commerciales",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.078427,
+        "Y": 49.03397,
+        "departement_code": "95"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure des techniques a\u00e9ronautiques et de construction automobile",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.041412,
+        "Y": 48.787656,
+        "departement_code": "78"
+    },
+    {
+        "name": "Sciences Po",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.32842,
+        "Y": 48.85412,
+        "departement_code": "75"
+    },
+    {
+        "name": "Neoma Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 1.063824,
+        "Y": 49.4631,
+        "departement_code": "76"
+    },
+    {
+        "name": "Universit\u00e9 Paris-Saclay",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.170077,
+        "Y": 48.709629,
+        "departement_code": "91"
+    },
+    {
+        "name": "Institut Mines-T\u00e9l\u00e9com, au p\u00e9rim\u00e8tre des \u00e9coles IMT Atlantique, Lille Douai, Albi, Al\u00e8s, Mines Saint-\u00c9tienne et Institut Mines-T\u00e9l\u00e9com Business school",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.19972,
+        "Y": 48.7132,
+        "departement_code": "91"
+    },
+    {
+        "name": "\u00c9cole nationale du g\u00e9nie de l'eau et de l'environnement de Strasbourg",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 7.758744,
+        "Y": 48.580797,
+        "departement_code": "67"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure des m\u00e9tiers de l'image et du son",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.34257,
+        "Y": 48.89055,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole pour l'informatique et les techniques avanc\u00e9es",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.362943,
+        "Y": 48.815598,
+        "departement_code": "94"
+    },
+    {
+        "name": "Vet Agro Sup",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.7111713886,
+        "Y": 45.7933147884,
+        "departement_code": "69"
+    },
+    {
+        "name": "Institut national des sciences appliqu\u00e9es Centre Val de Loire",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.416074872,
+        "Y": 47.0821667774,
+        "departement_code": "18"
+    },
+    {
+        "name": "Institut national du patrimoine",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.33907,
+        "Y": 48.86661,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut sup\u00e9rieur de l'a\u00e9ronautique et de l'espace",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.47408,
+        "Y": 43.5656,
+        "departement_code": "31"
+    },
+    {
+        "name": "Universit\u00e9 de Strasbourg",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 7.76465,
+        "Y": 48.57872,
+        "departement_code": "67"
+    },
+    {
+        "name": "Universit\u00e9 Polytechnique Hauts-de-France",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 3.51056,
+        "Y": 50.32622,
+        "departement_code": "59"
+    },
+    {
+        "name": "\u00c9cole catholique des arts et m\u00e9tiers",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 4.82518,
+        "Y": 45.76391,
+        "departement_code": "69"
+    },
+    {
+        "name": "\u00c9cole de management L\u00e9onard De Vinci",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.2359,
+        "Y": 48.8962,
+        "departement_code": "92"
+    },
+    {
+        "name": "Burgundy School of Business",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 5.04142,
+        "Y": 47.32806,
+        "departement_code": "21"
+    },
+    {
+        "name": "Universit\u00e9 de Paris",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.340105,
+        "Y": 48.851906,
+        "departement_code": "75"
+    },
+    {
+        "name": "Universit\u00e9 de Pau et des Pays de l'Adour",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.36509,
+        "Y": 43.31372,
+        "departement_code": "64"
+    },
+    {
+        "name": "Universit\u00e9 de Technologie de Compi\u00e8gne",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.800108,
+        "Y": 49.40024,
+        "departement_code": "60"
+    },
+    {
+        "name": "Centre national des arts du cirque",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 4.36256,
+        "Y": 48.95119,
+        "departement_code": "51"
+    },
+    {
+        "name": "\u00c9cole nationale d'ing\u00e9nieurs de Brest",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -4.56558,
+        "Y": 48.3607,
+        "departement_code": "29"
+    },
+    {
+        "name": "Excelia Group",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.15616,
+        "Y": 46.14069,
+        "departement_code": "17"
+    },
+    {
+        "name": "Institut catholique de Lille",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 3.0467104912,
+        "Y": 50.6330901906,
+        "departement_code": "59"
+    },
+    {
+        "name": "Institut d'ing\u00e9nierie informatique de Limoges",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 1.2718766928,
+        "Y": 45.8187993335,
+        "departement_code": "87"
+    },
+    {
+        "name": "Institut national des sciences appliqu\u00e9es de Rouen Normandie",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.06839,
+        "Y": 49.3852,
+        "departement_code": "76"
+    },
+    {
+        "name": "Universit\u00e9 de Bourgogne",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 5.06637,
+        "Y": 47.31274,
+        "departement_code": "21"
+    },
+    {
+        "name": "Universit\u00e9 de technologie de Belfort-Montb\u00e9liard",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 6.86586,
+        "Y": 47.5871,
+        "departement_code": "90"
+    },
+    {
+        "name": "CY Cergy Paris Universit\u00e9",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.07415,
+        "Y": 49.03889,
+        "departement_code": "95"
+    },
+    {
+        "name": "ECAM Rennes Louis de Broglie",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.74357,
+        "Y": 48.04692,
+        "departement_code": "35"
+    },
+    {
+        "name": "Arts et M\u00e9tiers Sciences et Technologies",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.35831,
+        "Y": 48.83357,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure de m\u00e9canique et des microtechniques",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 5.99307,
+        "Y": 47.25112,
+        "departement_code": "25"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'art et de design d'Amiens",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.29326,
+        "Y": 49.90229,
+        "departement_code": "80"
+    },
+    {
+        "name": "ICN Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 6.17029,
+        "Y": 48.67419,
+        "departement_code": "54"
+    },
+    {
+        "name": "Institut catholique de Toulouse",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 1.44233,
+        "Y": 43.59529,
+        "departement_code": "31"
+    },
+    {
+        "name": "Institut d'\u00e9conomie scientifique et de gestion",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 3.04488,
+        "Y": 50.63538,
+        "departement_code": "59"
+    },
+    {
+        "name": "Institut des relations publiques et de la communication d\u2019Angers",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.53222,
+        "Y": 47.44304,
+        "departement_code": "49"
+    },
+    {
+        "name": "Universit\u00e9 de N\u00eemes",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.35685,
+        "Y": 43.84274,
+        "departement_code": "30"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure des technologies et des affaires de Belfort",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 6.8608534183,
+        "Y": 47.6403207998,
+        "departement_code": "90"
+    },
+    {
+        "name": "Universit\u00e9 Paris-Panth\u00e9on-Assas",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.344888,
+        "Y": 48.846806,
+        "departement_code": "75"
+    },
+    {
+        "name": "Conservatoire national des arts et m\u00e9tiers",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.3554462194,
+        "Y": 48.8667579674,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole centrale d'\u00e9lectronique",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.28683,
+        "Y": 48.85152,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'architecture de Paris-La Villette",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.38192,
+        "Y": 48.89325,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'informatique pour l'industrie et l'entreprise",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.43202,
+        "Y": 48.6262,
+        "departement_code": "91"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure des sciences commerciales d'Angers",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.60065,
+        "Y": 47.47636,
+        "departement_code": "49"
+    },
+    {
+        "name": "Institut catholique de Rennes",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.74461,
+        "Y": 48.04855,
+        "departement_code": "35"
+    },
+    {
+        "name": "Institut national d'histoire de l'art",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.338842,
+        "Y": 48.866499,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut national universitaire Jean-Fran\u00e7ois Champollion",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.139,
+        "Y": 43.92,
+        "departement_code": "81"
+    },
+    {
+        "name": "Universit\u00e9 Paris sciences et lettres",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.33785,
+        "Y": 48.85464,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole d'ing\u00e9nieur d'agro-d\u00e9veloppement international",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.60052,
+        "Y": 47.4776,
+        "departement_code": "49"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'architecture de Paris-Belleville",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.3746132851,
+        "Y": 48.8752968872,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure de l'\u00e9lectronique et de ses applications de Cergy",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.072789669,
+        "Y": 49.0393730694,
+        "departement_code": "95"
+    },
+    {
+        "name": "Sciences Po Toulouse",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.431672,
+        "Y": 43.605603,
+        "departement_code": "31"
+    },
+    {
+        "name": "Universit\u00e9 de la Nouvelle-Cal\u00e9donie",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 166.40405,
+        "Y": -22.26356,
+        "departement_code": "98"
+    },
+    {
+        "name": "Universit\u00e9 de Tours",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 0.67367,
+        "Y": 47.38376,
+        "departement_code": "37"
+    },
+    {
+        "name": "Universit\u00e9 des Antilles",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -61.53016,
+        "Y": 16.22505,
+        "departement_code": "97"
+    },
+    {
+        "name": "Universit\u00e9 d'\u00c9vry-Val-d'Essonne",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.42738,
+        "Y": 48.62425,
+        "departement_code": "91"
+    },
+    {
+        "name": "Universit\u00e9 Paul-Val\u00e9ry - Montpellier 3",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 3.86924,
+        "Y": 43.63279,
+        "departement_code": "34"
+    },
+    {
+        "name": "ISEN Yncr\u00e9a M\u00e9diterran\u00e9e",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 5.93921,
+        "Y": 43.12073,
+        "departement_code": "83"
+    },
+    {
+        "name": "Audencia Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.5749502182,
+        "Y": 47.2061475411,
+        "departement_code": "44"
+    },
+    {
+        "name": "\u00c9cole des hautes \u00e9tudes en sciences sociales",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.326849,
+        "Y": 48.850176,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure de formation de l\u2019enseignement agricole",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.486908,
+        "Y": 43.534875,
+        "departement_code": "31"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'art et design Le Havre-Rouen",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.13727,
+        "Y": 49.44816,
+        "departement_code": "76"
+    },
+    {
+        "name": "Hautes \u00e9tudes d'ing\u00e9nieur",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 3.04502,
+        "Y": 50.633728,
+        "departement_code": "59"
+    },
+    {
+        "name": "Skema Business School",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 3.07581,
+        "Y": 50.63642,
+        "departement_code": "59"
+    },
+    {
+        "name": "Universit\u00e9 de Picardie Jules-Verne",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.26446,
+        "Y": 49.87584,
+        "departement_code": "80"
+    },
+    {
+        "name": "Universit\u00e9 de Reims Champagne-Ardenne",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.00825,
+        "Y": 49.23278,
+        "departement_code": "51"
+    },
+    {
+        "name": "\u00c9cole de l'air",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 5.111764,
+        "Y": 43.624652,
+        "departement_code": "13"
+    },
+    {
+        "name": "\u00c9cole fran\u00e7aise d'Extr\u00eame-Orient",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.2922,
+        "Y": 48.86451,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole nationale v\u00e9t\u00e9rinaire, agroalimentaire et de l'alimentation, Nantes-Atlantique",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -1.5242886543,
+        "Y": 47.2893636519,
+        "departement_code": "44"
+    },
+    {
+        "name": "Toulouse INP",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.50391,
+        "Y": 43.55539,
+        "departement_code": "31"
+    },
+    {
+        "name": "Bordeaux INP",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.60506,
+        "Y": 44.80572,
+        "departement_code": "33"
+    },
+    {
+        "name": "Institut textile et chimique",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 4.7676801682,
+        "Y": 45.7860356236,
+        "departement_code": "69"
+    },
+    {
+        "name": "Universit\u00e9 d'Angers",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.549657,
+        "Y": 47.47687,
+        "departement_code": "49"
+    },
+    {
+        "name": "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.14159,
+        "Y": 48.79959,
+        "departement_code": "78"
+    },
+    {
+        "name": "Universit\u00e9 d'Orl\u00e9ans",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.93397,
+        "Y": 47.85065,
+        "departement_code": "45"
+    },
+    {
+        "name": "Universit\u00e9 Paris VIII - Vincennes",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.3625862598,
+        "Y": 48.9454618918,
+        "departement_code": "93"
+    },
+    {
+        "name": "Universit\u00e9 Toulouse Capitole",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.438184,
+        "Y": 43.606087,
+        "departement_code": "31"
+    },
+    {
+        "name": "Institut fran\u00e7ais de la mode",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.36998,
+        "Y": 48.84062,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole de biologie industrielle",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.065594,
+        "Y": 49.032934,
+        "departement_code": "95"
+    },
+    {
+        "name": "\u00c9cole nationale de la m\u00e9t\u00e9orologie",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.37422,
+        "Y": 43.57598,
+        "departement_code": "31"
+    },
+    {
+        "name": "\u00c9cole navale",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -4.417857,
+        "Y": 48.279263,
+        "departement_code": "29"
+    },
+    {
+        "name": "Facult\u00e9s libres de l'Ouest",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -0.54616,
+        "Y": 47.46273,
+        "departement_code": "49"
+    },
+    {
+        "name": "Institut national d'enseignement sup\u00e9rieur pour l'agriculture, l'alimentation et l'environnement",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.28215,
+        "Y": 48.86275,
+        "departement_code": "75"
+    },
+    {
+        "name": "Institut sup\u00e9rieur des mat\u00e9riaux et de la construction m\u00e9canique",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.33287,
+        "Y": 48.9198,
+        "departement_code": "93"
+    },
+    {
+        "name": "Institut sup\u00e9rieur des arts de Toulouse",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.439737,
+        "Y": 43.600624,
+        "departement_code": "31"
+    },
+    {
+        "name": "Universit\u00e9 Le Havre Normandie",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 0.12896,
+        "Y": 49.49647,
+        "departement_code": "76"
+    },
+    {
+        "name": "Universit\u00e9 de Savoie",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 5.9175,
+        "Y": 45.56676,
+        "departement_code": "73"
+    },
+    {
+        "name": "Universit\u00e9 de Toulouse II \u2013 Le Mirail",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.40235,
+        "Y": 43.57954,
+        "departement_code": "31"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure de cr\u00e9ation industrielle - Les Ateliers",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.36934,
+        "Y": 48.8584,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure de chimie organique et min\u00e9rale",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.80246,
+        "Y": 49.40196,
+        "departement_code": "60"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'ing\u00e9nieurs en g\u00e9nie \u00e9lectrique",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 1.07715,
+        "Y": 49.38364,
+        "departement_code": "76"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'ing\u00e9nieurs L\u00e9onard-de-Vinci",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.2363990545,
+        "Y": 48.8963874171,
+        "departement_code": "92"
+    },
+    {
+        "name": "ESIEE-IT",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.081926,
+        "Y": 49.043554,
+        "departement_code": "95"
+    },
+    {
+        "name": "Le Mans Universit\u00e9",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 0.159251,
+        "Y": 48.0148,
+        "departement_code": "72"
+    },
+    {
+        "name": "Universit\u00e9 de Corse Pasquale Paoli",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 9.15328,
+        "Y": 42.30048,
+        "departement_code": "2B"
+    },
+    {
+        "name": "Universit\u00e9 Paris 1 - Panth\u00e9on Sorbonne",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.34488,
+        "Y": 48.8468,
+        "departement_code": "75"
+    },
+    {
+        "name": "\u00c9cole des arts industriels et des mines",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 3.13757,
+        "Y": 50.60648,
+        "departement_code": "59"
+    },
+    {
+        "name": "Institut national du service public",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 7.737568,
+        "Y": 48.581336,
+        "departement_code": "67"
+    },
+    {
+        "name": "\u00c9cole nationale d'ing\u00e9nieurs des travaux agricoles de Bordeaux",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.608576,
+        "Y": 44.792718,
+        "departement_code": "33"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure des technologies industrielles avanc\u00e9es",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.55395,
+        "Y": 43.44613,
+        "departement_code": "64"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure du bois",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.514663,
+        "Y": 47.284,
+        "departement_code": "44"
+    },
+    {
+        "name": "\u00c9cole polytechnique f\u00e9minine",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.329213,
+        "Y": 48.79218,
+        "departement_code": "94"
+    },
+    {
+        "name": "Institut sup\u00e9rieur d'agriculture de Lille",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 3.0466943979,
+        "Y": 50.6338081264,
+        "departement_code": "59"
+    },
+    {
+        "name": "Rennes School of Business",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.69295,
+        "Y": 48.127773,
+        "departement_code": "35"
+    },
+    {
+        "name": "Universit\u00e9 Bordeaux Montaigne",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.615058,
+        "Y": 44.8015,
+        "departement_code": "33"
+    },
+    {
+        "name": "Universit\u00e9 de Bordeaux",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.596578,
+        "Y": 44.809966,
+        "departement_code": "33"
+    },
+    {
+        "name": "Universit\u00e9 Gustave Eiffel",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.58747,
+        "Y": 48.83915,
+        "departement_code": "77"
+    },
+    {
+        "name": "ISEN-ISA-HEI",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 3.04665,
+        "Y": 50.63385,
+        "departement_code": "59"
+    },
+    {
+        "name": "CESI",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.24012,
+        "Y": 48.88976,
+        "departement_code": "92"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d\u2019architecture de Versailles",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.12753,
+        "Y": 48.8008,
+        "departement_code": "78"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'architecture de Clermont-Ferrand",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 3.10341,
+        "Y": 45.80157,
+        "departement_code": "63"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure de paysage",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.123464,
+        "Y": 48.799059,
+        "departement_code": "78"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure du p\u00e9trole et des moteurs",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 2.172404,
+        "Y": 48.877622,
+        "departement_code": "92"
+    },
+    {
+        "name": "\u00c9cole sup\u00e9rieure d'arts et m\u00e9dias de Caen - Cherbourg",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -0.346302,
+        "Y": 49.180866,
+        "departement_code": "14"
+    },
+    {
+        "name": "ESCP Europe",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.317575,
+        "Y": 48.842394,
+        "departement_code": "75"
+    },
+    {
+        "name": "Universit\u00e9 Jean Moulin - Lyon 3",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.860547,
+        "Y": 45.747027,
+        "departement_code": "69"
+    },
+    {
+        "name": "Centre de ressources, d'expertise et de performance sportives de Toulouse",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.47394,
+        "Y": 43.56992,
+        "departement_code": "31"
+    },
+    {
+        "name": "\u00c9cole des hautes \u00e9tudes commerciales du nord",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 3.16605,
+        "Y": 50.67306,
+        "departement_code": "59"
+    },
+    {
+        "name": "\u00c9cole nationale de l'aviation civile",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.480601,
+        "Y": 43.565904,
+        "departement_code": "31"
+    },
+    {
+        "name": "\u00c9cole nationale sup\u00e9rieure d'architecture de Strasbourg",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 7.73711,
+        "Y": 48.58582,
+        "departement_code": "67"
+    },
+    {
+        "name": "Haute \u00e9cole des arts du Rhin",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 7.759293,
+        "Y": 48.582371,
+        "departement_code": "67"
+    },
+    {
+        "name": "Institut national des sciences appliqu\u00e9es de Lyon",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.8780101538,
+        "Y": 45.7826238894,
+        "departement_code": "69"
+    },
+    {
+        "name": "Institut protestant de th\u00e9ologie",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.337221,
+        "Y": 48.834229,
+        "departement_code": "75"
+    },
+    {
+        "name": "Universit\u00e9 de Haute-Alsace",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 7.31485,
+        "Y": 47.7323,
+        "departement_code": "68"
+    },
+    {
+        "name": "Universit\u00e9 de La R\u00e9union",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 55.4843,
+        "Y": -20.9019,
+        "departement_code": "97"
+    },
+    {
+        "name": "Universit\u00e9 de Rouen Normandie",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.06895,
+        "Y": 49.4583,
+        "departement_code": "76"
+    },
+    {
+        "name": "Nantes Universit\u00e9",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -1.555908,
+        "Y": 47.209413,
+        "departement_code": "44"
+    },
+    {
+        "name": "\u00c9cole d'application des ing\u00e9nieurs des travaux publics de l'\u00c9tat",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 4.9233984947,
+        "Y": 45.7784038239,
+        "departement_code": "69"
+    },
+    {
+        "name": "Universit\u00e9 de technologie Tarbes Occitanie Pyr\u00e9n\u00e9es",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 0.05325,
+        "Y": 43.225181,
+        "departement_code": "65"
+    },
+    {
+        "name": "\u00c9cole sp\u00e9ciale de m\u00e9canique et d'\u00e9lectricit\u00e9",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": 2.392969,
+        "Y": 48.81413,
+        "departement_code": "94"
+    },
+    {
+        "name": "Institut catholique de Vend\u00e9e",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "priv\u00e9",
+        "X": -1.41955,
+        "Y": 46.67251,
+        "departement_code": "85"
+    },
+    {
+        "name": "Institut national des sciences appliqu\u00e9es de Toulouse",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 1.467769146,
+        "Y": 43.5696061664,
+        "departement_code": "31"
+    },
+    {
+        "name": "La Rochelle Universit\u00e9",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -1.15504,
+        "Y": 46.14774,
+        "departement_code": "17"
+    },
+    {
+        "name": "Universit\u00e9 C\u00f4te d'Azur",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 7.26664,
+        "Y": 43.71693,
+        "departement_code": "60"
+    },
+    {
+        "name": "Universit\u00e9 de Bretagne Occidentale",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "secteur d'\u00e9tablissement": "public",
+        "X": -4.5077,
+        "Y": 48.39803,
+        "departement_code": "29"
+    },
+    {
+        "name": "Universit\u00e9 de Lorraine",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "secteur d'\u00e9tablissement": "public",
+        "X": 6.1766070127,
+        "Y": 48.6961443832,
+        "departement_code": "54"
+    }
+]
