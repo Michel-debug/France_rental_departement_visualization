@@ -1,0 +1,817 @@
+[
+    {
+        "departement_code": "10",
+        "gratuit": false,
+        "count": 5
+    },
+    {
+        "departement_code": "10",
+        "gratuit": true,
+        "count": 462
+    },
+    {
+        "departement_code": "11",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "11",
+        "gratuit": true,
+        "count": 452
+    },
+    {
+        "departement_code": "12",
+        "gratuit": true,
+        "count": 268
+    },
+    {
+        "departement_code": "13",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "13",
+        "gratuit": true,
+        "count": 1104
+    },
+    {
+        "departement_code": "14",
+        "gratuit": false,
+        "count": 9
+    },
+    {
+        "departement_code": "14",
+        "gratuit": true,
+        "count": 1362
+    },
+    {
+        "departement_code": "15",
+        "gratuit": true,
+        "count": 38
+    },
+    {
+        "departement_code": "16",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "16",
+        "gratuit": true,
+        "count": 215
+    },
+    {
+        "departement_code": "17",
+        "gratuit": false,
+        "count": 11
+    },
+    {
+        "departement_code": "17",
+        "gratuit": true,
+        "count": 1924
+    },
+    {
+        "departement_code": "18",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "18",
+        "gratuit": true,
+        "count": 262
+    },
+    {
+        "departement_code": "19",
+        "gratuit": true,
+        "count": 83
+    },
+    {
+        "departement_code": "20",
+        "gratuit": true,
+        "count": 2
+    },
+    {
+        "departement_code": "21",
+        "gratuit": false,
+        "count": 8
+    },
+    {
+        "departement_code": "21",
+        "gratuit": true,
+        "count": 986
+    },
+    {
+        "departement_code": "22",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "22",
+        "gratuit": true,
+        "count": 715
+    },
+    {
+        "departement_code": "23",
+        "gratuit": true,
+        "count": 66
+    },
+    {
+        "departement_code": "24",
+        "gratuit": false,
+        "count": 5
+    },
+    {
+        "departement_code": "24",
+        "gratuit": true,
+        "count": 215
+    },
+    {
+        "departement_code": "25",
+        "gratuit": false,
+        "count": 4
+    },
+    {
+        "departement_code": "25",
+        "gratuit": true,
+        "count": 978
+    },
+    {
+        "departement_code": "26",
+        "gratuit": false,
+        "count": 30
+    },
+    {
+        "departement_code": "26",
+        "gratuit": true,
+        "count": 460
+    },
+    {
+        "departement_code": "27",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "27",
+        "gratuit": true,
+        "count": 185
+    },
+    {
+        "departement_code": "28",
+        "gratuit": false,
+        "count": 4
+    },
+    {
+        "departement_code": "28",
+        "gratuit": true,
+        "count": 158
+    },
+    {
+        "departement_code": "29",
+        "gratuit": false,
+        "count": 8
+    },
+    {
+        "departement_code": "29",
+        "gratuit": true,
+        "count": 1724
+    },
+    {
+        "departement_code": "2A",
+        "gratuit": true,
+        "count": 4
+    },
+    {
+        "departement_code": "2B",
+        "gratuit": true,
+        "count": 3
+    },
+    {
+        "departement_code": "30",
+        "gratuit": false,
+        "count": 9
+    },
+    {
+        "departement_code": "30",
+        "gratuit": true,
+        "count": 508
+    },
+    {
+        "departement_code": "31",
+        "gratuit": false,
+        "count": 15
+    },
+    {
+        "departement_code": "31",
+        "gratuit": true,
+        "count": 2771
+    },
+    {
+        "departement_code": "32",
+        "gratuit": true,
+        "count": 111
+    },
+    {
+        "departement_code": "33",
+        "gratuit": false,
+        "count": 82
+    },
+    {
+        "departement_code": "33",
+        "gratuit": true,
+        "count": 2975
+    },
+    {
+        "departement_code": "34",
+        "gratuit": false,
+        "count": 12
+    },
+    {
+        "departement_code": "34",
+        "gratuit": true,
+        "count": 1996
+    },
+    {
+        "departement_code": "35",
+        "gratuit": false,
+        "count": 16
+    },
+    {
+        "departement_code": "35",
+        "gratuit": true,
+        "count": 2873
+    },
+    {
+        "departement_code": "36",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "36",
+        "gratuit": true,
+        "count": 94
+    },
+    {
+        "departement_code": "37",
+        "gratuit": false,
+        "count": 25
+    },
+    {
+        "departement_code": "37",
+        "gratuit": true,
+        "count": 2027
+    },
+    {
+        "departement_code": "38",
+        "gratuit": false,
+        "count": 116
+    },
+    {
+        "departement_code": "38",
+        "gratuit": true,
+        "count": 4689
+    },
+    {
+        "departement_code": "39",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "39",
+        "gratuit": true,
+        "count": 328
+    },
+    {
+        "departement_code": "40",
+        "gratuit": false,
+        "count": 8
+    },
+    {
+        "departement_code": "40",
+        "gratuit": true,
+        "count": 1497
+    },
+    {
+        "departement_code": "41",
+        "gratuit": false,
+        "count": 3
+    },
+    {
+        "departement_code": "41",
+        "gratuit": true,
+        "count": 237
+    },
+    {
+        "departement_code": "42",
+        "gratuit": false,
+        "count": 10
+    },
+    {
+        "departement_code": "42",
+        "gratuit": true,
+        "count": 851
+    },
+    {
+        "departement_code": "43",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "43",
+        "gratuit": true,
+        "count": 100
+    },
+    {
+        "departement_code": "44",
+        "gratuit": false,
+        "count": 46
+    },
+    {
+        "departement_code": "44",
+        "gratuit": true,
+        "count": 5211
+    },
+    {
+        "departement_code": "45",
+        "gratuit": false,
+        "count": 295
+    },
+    {
+        "departement_code": "45",
+        "gratuit": true,
+        "count": 766
+    },
+    {
+        "departement_code": "46",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "46",
+        "gratuit": true,
+        "count": 91
+    },
+    {
+        "departement_code": "47",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "47",
+        "gratuit": true,
+        "count": 207
+    },
+    {
+        "departement_code": "48",
+        "gratuit": true,
+        "count": 19
+    },
+    {
+        "departement_code": "49",
+        "gratuit": false,
+        "count": 5
+    },
+    {
+        "departement_code": "49",
+        "gratuit": true,
+        "count": 2186
+    },
+    {
+        "departement_code": "50",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "50",
+        "gratuit": true,
+        "count": 472
+    },
+    {
+        "departement_code": "51",
+        "gratuit": true,
+        "count": 1152
+    },
+    {
+        "departement_code": "52",
+        "gratuit": true,
+        "count": 31
+    },
+    {
+        "departement_code": "53",
+        "gratuit": false,
+        "count": 3
+    },
+    {
+        "departement_code": "53",
+        "gratuit": true,
+        "count": 250
+    },
+    {
+        "departement_code": "54",
+        "gratuit": false,
+        "count": 33
+    },
+    {
+        "departement_code": "54",
+        "gratuit": true,
+        "count": 1317
+    },
+    {
+        "departement_code": "55",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "55",
+        "gratuit": true,
+        "count": 39
+    },
+    {
+        "departement_code": "56",
+        "gratuit": false,
+        "count": 9
+    },
+    {
+        "departement_code": "56",
+        "gratuit": true,
+        "count": 1275
+    },
+    {
+        "departement_code": "57",
+        "gratuit": false,
+        "count": 15
+    },
+    {
+        "departement_code": "57",
+        "gratuit": true,
+        "count": 691
+    },
+    {
+        "departement_code": "58",
+        "gratuit": false,
+        "count": 3
+    },
+    {
+        "departement_code": "58",
+        "gratuit": true,
+        "count": 132
+    },
+    {
+        "departement_code": "59",
+        "gratuit": false,
+        "count": 194
+    },
+    {
+        "departement_code": "59",
+        "gratuit": true,
+        "count": 4043
+    },
+    {
+        "departement_code": "60",
+        "gratuit": false,
+        "count": 21
+    },
+    {
+        "departement_code": "60",
+        "gratuit": true,
+        "count": 1749
+    },
+    {
+        "departement_code": "61",
+        "gratuit": false,
+        "count": 12
+    },
+    {
+        "departement_code": "61",
+        "gratuit": true,
+        "count": 220
+    },
+    {
+        "departement_code": "62",
+        "gratuit": false,
+        "count": 20
+    },
+    {
+        "departement_code": "62",
+        "gratuit": true,
+        "count": 1038
+    },
+    {
+        "departement_code": "63",
+        "gratuit": false,
+        "count": 5
+    },
+    {
+        "departement_code": "63",
+        "gratuit": true,
+        "count": 984
+    },
+    {
+        "departement_code": "64",
+        "gratuit": false,
+        "count": 11
+    },
+    {
+        "departement_code": "64",
+        "gratuit": true,
+        "count": 1423
+    },
+    {
+        "departement_code": "65",
+        "gratuit": true,
+        "count": 158
+    },
+    {
+        "departement_code": "66",
+        "gratuit": true,
+        "count": 680
+    },
+    {
+        "departement_code": "67",
+        "gratuit": false,
+        "count": 26
+    },
+    {
+        "departement_code": "67",
+        "gratuit": true,
+        "count": 7942
+    },
+    {
+        "departement_code": "68",
+        "gratuit": false,
+        "count": 8
+    },
+    {
+        "departement_code": "68",
+        "gratuit": true,
+        "count": 1231
+    },
+    {
+        "departement_code": "69",
+        "gratuit": false,
+        "count": 39
+    },
+    {
+        "departement_code": "69",
+        "gratuit": true,
+        "count": 7201
+    },
+    {
+        "departement_code": "70",
+        "gratuit": true,
+        "count": 176
+    },
+    {
+        "departement_code": "71",
+        "gratuit": false,
+        "count": 3
+    },
+    {
+        "departement_code": "71",
+        "gratuit": true,
+        "count": 712
+    },
+    {
+        "departement_code": "72",
+        "gratuit": false,
+        "count": 13
+    },
+    {
+        "departement_code": "72",
+        "gratuit": true,
+        "count": 1045
+    },
+    {
+        "departement_code": "73",
+        "gratuit": false,
+        "count": 14
+    },
+    {
+        "departement_code": "73",
+        "gratuit": true,
+        "count": 578
+    },
+    {
+        "departement_code": "74",
+        "gratuit": false,
+        "count": 16
+    },
+    {
+        "departement_code": "74",
+        "gratuit": true,
+        "count": 1474
+    },
+    {
+        "departement_code": "75",
+        "gratuit": false,
+        "count": 33
+    },
+    {
+        "departement_code": "75",
+        "gratuit": true,
+        "count": 9348
+    },
+    {
+        "departement_code": "76",
+        "gratuit": false,
+        "count": 21
+    },
+    {
+        "departement_code": "76",
+        "gratuit": true,
+        "count": 1414
+    },
+    {
+        "departement_code": "77",
+        "gratuit": false,
+        "count": 29
+    },
+    {
+        "departement_code": "77",
+        "gratuit": true,
+        "count": 669
+    },
+    {
+        "departement_code": "78",
+        "gratuit": false,
+        "count": 27
+    },
+    {
+        "departement_code": "78",
+        "gratuit": true,
+        "count": 1738
+    },
+    {
+        "departement_code": "79",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "79",
+        "gratuit": true,
+        "count": 360
+    },
+    {
+        "departement_code": "80",
+        "gratuit": false,
+        "count": 15
+    },
+    {
+        "departement_code": "80",
+        "gratuit": true,
+        "count": 517
+    },
+    {
+        "departement_code": "81",
+        "gratuit": true,
+        "count": 316
+    },
+    {
+        "departement_code": "82",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "82",
+        "gratuit": true,
+        "count": 385
+    },
+    {
+        "departement_code": "83",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "83",
+        "gratuit": true,
+        "count": 262
+    },
+    {
+        "departement_code": "84",
+        "gratuit": false,
+        "count": 6
+    },
+    {
+        "departement_code": "84",
+        "gratuit": true,
+        "count": 778
+    },
+    {
+        "departement_code": "85",
+        "gratuit": false,
+        "count": 6
+    },
+    {
+        "departement_code": "85",
+        "gratuit": true,
+        "count": 1289
+    },
+    {
+        "departement_code": "86",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "86",
+        "gratuit": true,
+        "count": 588
+    },
+    {
+        "departement_code": "87",
+        "gratuit": false,
+        "count": 7
+    },
+    {
+        "departement_code": "87",
+        "gratuit": true,
+        "count": 341
+    },
+    {
+        "departement_code": "88",
+        "gratuit": false,
+        "count": 1
+    },
+    {
+        "departement_code": "88",
+        "gratuit": true,
+        "count": 246
+    },
+    {
+        "departement_code": "89",
+        "gratuit": false,
+        "count": 9
+    },
+    {
+        "departement_code": "89",
+        "gratuit": true,
+        "count": 179
+    },
+    {
+        "departement_code": "90",
+        "gratuit": false,
+        "count": 2
+    },
+    {
+        "departement_code": "90",
+        "gratuit": true,
+        "count": 197
+    },
+    {
+        "departement_code": "91",
+        "gratuit": false,
+        "count": 25
+    },
+    {
+        "departement_code": "91",
+        "gratuit": true,
+        "count": 1735
+    },
+    {
+        "departement_code": "92",
+        "gratuit": false,
+        "count": 19
+    },
+    {
+        "departement_code": "92",
+        "gratuit": true,
+        "count": 3378
+    },
+    {
+        "departement_code": "93",
+        "gratuit": false,
+        "count": 20
+    },
+    {
+        "departement_code": "93",
+        "gratuit": true,
+        "count": 1335
+    },
+    {
+        "departement_code": "94",
+        "gratuit": false,
+        "count": 22
+    },
+    {
+        "departement_code": "94",
+        "gratuit": true,
+        "count": 1531
+    },
+    {
+        "departement_code": "95",
+        "gratuit": false,
+        "count": 31
+    },
+    {
+        "departement_code": "95",
+        "gratuit": true,
+        "count": 806
+    },
+    {
+        "departement_code": "97",
+        "gratuit": true,
+        "count": 300
+    },
+    {
+        "departement_code": "98",
+        "gratuit": true,
+        "count": 11
+    }
+]

@@ -127,7 +127,7 @@ function drawSinglePolygonInBbox(ring, bbox) {
 
 function drawIconLegend() {
   // 决定一下图例在画布右上角，稍微留点边距
-  let legendX = width - 600;
+  let legendX = width - 220;
   let legendY = 100;
   let iconSize = 24; 
   let lineSpacing = 35; // 每行的垂直间距
@@ -148,12 +148,12 @@ function drawIconLegend() {
   noStroke();
 
   // 第1行: Public school
-  image(publicIcon, legendX + 5, legendY + 5, iconSize, iconSize);
+  image(publicSchoolIcon, legendX + 5, legendY + 5, iconSize, iconSize);
   text("Public School", legendX + 5 + iconSize + textOffsetX, legendY + 5 + iconSize/2);
 
   // 第2行: Private school
   let secondLineY = legendY + 5 + lineSpacing;
-  image(privateIcon, legendX + 5, secondLineY, iconSize, iconSize);
+  image(privateSchoolIcon, legendX + 5, secondLineY, iconSize, iconSize);
   text("Private School", legendX + 5 + iconSize + textOffsetX, secondLineY + iconSize/2);
 
   // 第3行: Bike station
@@ -194,11 +194,6 @@ function drawCapacityLegend() {
   text(`high capacity`, legendX + legendW + 10, legendY );
  
   text(`low capacity`, legendX + legendW + 10, legendY + legendH );
-  let iconSize = 20;
-  let iconX = legendX - 15 - iconSize;
-  let iconY = legendY - 15;
-  imageMode(CENTER);
-  image(bikeIcon, iconX, iconY, iconSize, iconSize);
   text("Bike Capacity", legendX - 15, legendY - 15 );
 }
 
@@ -746,7 +741,6 @@ function draw() {
     drawDeptEtablissements(selectedDept);
     drawBackButton();
     drawCapacityLegend();
-    drawIconLegend();
   }
   if (hoveredItem) {
     drawTooltip(hoveredItem);

@@ -194,11 +194,9 @@ function drawCapacityLegend() {
   text(`high capacity`, legendX + legendW + 10, legendY );
  
   text(`low capacity`, legendX + legendW + 10, legendY + legendH );
-  let iconSize = 20;
+  let iconSize = 16;
   let iconX = legendX - 15 - iconSize;
-  let iconY = legendY - 15;
-  imageMode(CENTER);
-  image(bikeIcon, iconX, iconY, iconSize, iconSize);
+  let iconY = legendY + legendH - 10;
   text("Bike Capacity", legendX - 15, legendY - 15 );
 }
 

@@ -127,7 +127,7 @@ function drawSinglePolygonInBbox(ring, bbox) {
 
 function drawIconLegend() {
   // 决定一下图例在画布右上角，稍微留点边距
-  let legendX = width - 600;
+  let legendX = 120;
   let legendY = 100;
   let iconSize = 24; 
   let lineSpacing = 35; // 每行的垂直间距
@@ -194,11 +194,6 @@ function drawCapacityLegend() {
   text(`high capacity`, legendX + legendW + 10, legendY );
  
   text(`low capacity`, legendX + legendW + 10, legendY + legendH );
-  let iconSize = 20;
-  let iconX = legendX - 15 - iconSize;
-  let iconY = legendY - 15;
-  imageMode(CENTER);
-  image(bikeIcon, iconX, iconY, iconSize, iconSize);
   text("Bike Capacity", legendX - 15, legendY - 15 );
 }
 

@@ -2,28 +2,28 @@ let rentalData = {}; // 存储租金数据（字典格式）
 let rentalDataArray = [];
 let departementsGeoJSON;
 let dataLoaded = false; // 数据加载标志
-const MIN_PRICE = 5;
+const MIN_PRICE = 5;  
 const MAX_PRICE = 30;
 
 let etablissementsData = [];
 let cyclingStationsData = [];
 let bikeIcon;
-
+let hoveredStation = null;
 let minCap = Infinity, maxCap = -Infinity;
 
 selectedDept = null;
 let deptBbox = null;
-let hoveredItem = null;
+
 
 function setup() {
   createCanvas(1400, 1200);
   noLoop(); // 等数据加载完成后再 redraw()
-
-  startColor = color(135, 206, 250);
-  endColor = color(0, 0, 139);
+  
+  startColor = color(135, 206, 250); 
+  endColor   = color(0, 0, 139);
 
   // ✅ 加载租金 JSON 数据
-  loadJSON('data/departement_rental_data.json', function (data) {
+  loadJSON('data/departement_rental_data.json', function(data) {
     if (Array.isArray(data)) {
       rentalDataArray = data; // 赋值数组数据
       data.forEach(item => {
@@ -37,16 +37,16 @@ function setup() {
   });
 
   // ✅ 加载 GeoJSON 数据
-  loadJSON('data/departements.geojson', function (data) {
+  loadJSON('data/departements.geojson', function(data) {
     departementsGeoJSON = data;
     console.log("✅ GeoJSON 数据加载成功:", departementsGeoJSON);
     checkDataLoaded();
   });
 
   // load cycling station data
-  loadJSON('data/cycling_stations_departement.json', function (data) {
+  loadJSON('data/cycling_stations_departement.json', function(data) {
     cyclingStationsData = data;
-
+    
     for (let st of cyclingStationsData) {
       if (st.capacite < minCap) minCap = st.capacite;
       if (st.capacite > maxCap) maxCap = st.capacite;
@@ -57,7 +57,7 @@ function setup() {
   });
 
   // load etablissement data 
-  loadJSON('data/etablissement_departement.json', function (data) {
+  loadJSON('data/etablissement_departement.json', function(data) {
     etablissementsData = data;
     console.log("✅ Etablissement data loaded:", etablissementsData);
     checkDataLoaded();
@@ -125,105 +125,27 @@ function drawSinglePolygonInBbox(ring, bbox) {
   endShape(CLOSE);
 }
 
-function drawIconLegend() {
-  // 决定一下图例在画布右上角，稍微留点边距
-  let legendX = width - 600;
-  let legendY = 100;
-  let iconSize = 24; 
-  let lineSpacing = 35; // 每行的垂直间距
-  let textOffsetX = 30; // 文字相对图标的水平偏移
-  let boxWidth = 200;
-  let boxHeight = 120; // 大概够放3行
-
-  // 画背景框(可选)
-  fill(255, 230);
-  stroke(0);
-  rect(legendX, legendY, boxWidth, boxHeight, 8);
-
-  // 设置绘制模式
-  imageMode(CORNER);
-  textAlign(LEFT, CENTER);
-  textSize(14);
-  fill(0);
-  noStroke();
-
-  // 第1行: Public school
-  image(publicIcon, legendX + 5, legendY + 5, iconSize, iconSize);
-  text("Public School", legendX + 5 + iconSize + textOffsetX, legendY + 5 + iconSize/2);
-
-  // 第2行: Private school
-  let secondLineY = legendY + 5 + lineSpacing;
-  image(privateIcon, legendX + 5, secondLineY, iconSize, iconSize);
-  text("Private School", legendX + 5 + iconSize + textOffsetX, secondLineY + iconSize/2);
-
-  // 第3行: Bike station
-  let thirdLineY = legendY + 5 + 2 * lineSpacing;
-  image(bikeIcon, legendX + 5, thirdLineY, iconSize, iconSize);
-  text("Cycling Station", legendX + 5 + iconSize + textOffsetX, thirdLineY + iconSize/2);
-}
-
-function drawCapacityLegend() {
-  let legendX = width - 200;
-  let legendY = 50;
-  let legendW = 20;
-  let legendH = 200;
-  noStroke();
-  for (let i = 0; i < legendH; i++) {
-    // i 从 0~(legendH-1)
-    let t = i / (legendH - 1); // 确保 t=0 → 灰色起点，t=1 → 黑色终点
-    // 计算灰度值（从 128 到 0 线性递减）
-    let grayVal = Math.round(lerp(128, 0, t));
-    // 直接设置灰度颜色（RGB 相同值）
-    fill(grayVal, grayVal, grayVal);
-
-    // 画 1px 高度的矩形
-    rect(legendX, legendY + (legendH - i), legendW, 1);
-  }
-
-  // 边框
-  stroke(0);
-  noFill();
-  rect(legendX, legendY, legendW, legendH);
-
-  // 文字说明: capacity min / max
-  fill(0);
-  noStroke();
-  textSize(12);
-  textAlign(LEFT, CENTER);
-
-  text(`high capacity`, legendX + legendW + 10, legendY );
- 
-  text(`low capacity`, legendX + legendW + 10, legendY + legendH );
-  let iconSize = 20;
-  let iconX = legendX - 15 - iconSize;
-  let iconY = legendY - 15;
-  imageMode(CENTER);
-  image(bikeIcon, iconX, iconY, iconSize, iconSize);
-  text("Bike Capacity", legendX - 15, legendY - 15 );
-}
-
-
-function mouseClicked() {
-  if (!dataLoaded) return;
-  if (selectedDept == null) {
+function mouseClicked(){
+  if(!dataLoaded) return;
+  if(selectedDept == null){
     let features = departementsGeoJSON.features;
     let foundDept = null;
     for (let i = 0; i < features.length; i++) {
       let dept = features[i];
-      let deptCode = dept.properties.code;
+      let deptCode = dept.properties.code; 
       let inside = isPointInDept(mouseX, mouseY, dept.geometry);
       if (inside) {
         foundDept = deptCode;
         break;
       }
-    }
-    if (foundDept) {
+  }
+    if(foundDept){
       console.log("Selected dept: ", foundDept);
       selectedDept = foundDept;
       deptBbox = getDeptBoundingBox(selectedDept);
       redraw();
     }
-  } else {
+  }else{
     let btnX = 20, btnY = 20;
     let btnW = 80, btnH = 30;
     if (
@@ -238,12 +160,11 @@ function mouseClicked() {
   }
 }
 function drawDeptEtablissements(deptCode) {
-  let bestDist = Infinity;
   // 遍历 etablissementData，过滤出 departement_code == deptCode
   for (let e of etablissementsData) {
-
+    
     if (e.departement_code === deptCode) {
-
+      
       let lon = e.X;
       let lat = e.Y;
 
@@ -252,30 +173,26 @@ function drawDeptEtablissements(deptCode) {
       // 注意：lat 一般是往上的，要反转一下
       let sy = map(lat, deptBbox.minLat, deptBbox.maxLat, height - 50, 50);
       // 根据 secteur 选择颜色
-      let secteur = e["secteur d'\u00e9tablissement"] || "public";
-      // 你也可以统一改成 e.secteur
-      let iconImg = (secteur === "public") ? publicIcon : privateIcon;
-
-      tint(255, 255)
-      imageMode(CENTER);
-      image(iconImg, sx, sy, 28, 28);
-
-      let d = dist(mouseX, mouseY, sx, sy);
-      if (d < 14 && d < bestDist) {
-        bestDist = d;
-        hoveredItem = {
-          type: "etablissement",
-          x: sx,
-          y: sy,
-          data: e
-        };
+      if (e["secteur d'\u00e9tablissement"] === "public") {
+        image(publicIcon, sx, sy, 20, 20);
+      } else {
+        image(privateIcon, sx, sy, 20, 20);
+       
       }
+      tint(255,255)
+      imageMode(CENTER);
+      // 你也可根据 type d'établissement 做不同形状/图标
+      // text() 标签
+      fill(0);
+      textSize(12);
+      textAlign(LEFT, CENTER);
+      text(e["name"] || "", sx + 8, sy);
     }
   }
 }
 
 function drawDeptCyclingStations(deptCode) {
-
+  hoveredStation = null;
   let bestDist = Infinity;
   for (let station of cyclingStationsData) {
     if (station.departement_code === deptCode) {
@@ -286,85 +203,17 @@ function drawDeptCyclingStations(deptCode) {
       // 映射到屏幕
       let sx = map(lon, deptBbox.minLon, deptBbox.maxLon, 50, width - 50);
       let sy = map(lat, deptBbox.minLat, deptBbox.maxLat, height - 50, 50);
-
+      
       let alphaVal = map(capacite, minCap, maxCap, 80, 255);
       push();
       imageMode(CENTER);
-      tint(255, alphaVal);
+      tint(255,alphaVal);
       image(bikeIcon, sx, sy, 20, 20);
       pop();
       // 显示容量信息，可选
       let d = dist(mouseX, mouseY, sx, sy);
-      if (d < 12 && d < bestDist) {
-        bestDist = d;
-        hoveredItem = {
-          type: "station",
-          x: sx,
-          y: sy,
-          data: station
-        };
-      }
+      if(d < 12 )
     }
-  }
-}
-
-function drawTooltip(item) {
-  let infoText = "";
-  if (item.type === "station") {
-    let st = item.data;
-    infoText = `Cycling Station
-      Capacity: ${st.capacite}
-      Acces: ${st.acces}
-      Mobilier: ${st.mobilier}
-      gratuit: ${st.gratuit}`;
-  } else if (item.type === "etablissement") {
-    let e = item.data;
-    infoText = `Etablissement name: ${e["name"]}
-    Type: ${e["type d'\u00e9tablissement"]}
-    Secteur: ${e["secteur d'\u00e9tablissement"]}`;
-  }
-
-  // 准备绘制
-  textSize(12);
-  textAlign(LEFT, TOP);
-
-  // 拆分多行
-  let lines = infoText.split('\n');
-
-  // 找最宽的一行
-  let maxW = 0;
-  for (let line of lines) {
-    let w = textWidth(line);
-    if (w > maxW) maxW = w;
-  }
-
-  let lineH = 16;       // 行高
-  let padding = 6;
-  let boxW = maxW + padding * 2;
-  let boxH = lineH * lines.length + padding * 2;
-
-  // 计算 tooltip 位置，防止溢出
-  let tooltipX = item.x + 10;
-  let tooltipY = item.y + 10;
-  if (tooltipX + boxW > width) {
-    tooltipX = width - boxW - 10;
-  }
-  if (tooltipY + boxH > height) {
-    tooltipY = height - boxH - 10;
-  }
-
-  // 画背景
-  fill(255, 230);
-  stroke(0);
-  rect(tooltipX, tooltipY, boxW, boxH, 5);
-
-  // 画文字
-  fill(0);
-  noStroke();
-  let ty = tooltipY + padding;
-  for (let line of lines) {
-    text(line, tooltipX + padding, ty);
-    ty += lineH;
   }
 }
 
@@ -398,7 +247,7 @@ function checkPolygon(x, y, coordinates) {
   const screenPoly = coordinates[0].map(coord => {
     const px = map(coord[0], -5, 10, 50, width - 50);
     const py = map(coord[1], 41, 51, height - 50, 50);
-    return { x: px, y: py };
+    return {x: px, y: py};
   });
   return isPointInPolygon(x, y, screenPoly);
 }
@@ -426,11 +275,11 @@ function drawBoxPlot(deptCode) {
   const plotX = 50;
   const plotY = 50; // 调整起始 Y 坐标，确保与文本不重叠
   const plotWidth = 320;
-  const plotHeight = 150;
+  const plotHeight = 150; 
 
-  fill(255, 120);
+  fill(255,120);
   stroke(0);
-  rect(plotX, plotY, plotWidth, plotHeight, 5);
+  rect(plotX, plotY, plotWidth, plotHeight,5);
 
   // 定义动态放大比例
   const expansionFactor = 0.2;
@@ -439,20 +288,20 @@ function drawBoxPlot(deptCode) {
 
   // 映射函数
   const priceToY = price => {
-    return map(price,
-      expandedMin,
-      expandedMax,
-      plotY + plotHeight - 30,
+    return map(price, 
+      expandedMin, 
+      expandedMax, 
+      plotY + plotHeight - 30, 
       plotY + 30
     );
   };
 
   // 计算数据点坐标
-  const minY = priceToY(data.min);
-  const q1Y = priceToY(data.q1);
+  const minY    = priceToY(data.min);
+  const q1Y     = priceToY(data.q1);
   const medianY = priceToY(data.median);
-  const q3Y = priceToY(data.q3);
-  const maxY = priceToY(data.max);
+  const q3Y     = priceToY(data.q3);
+  const maxY    = priceToY(data.max);
 
   // 绘制箱线图
   const boxX = plotX + 180;
@@ -478,7 +327,7 @@ function drawBoxPlot(deptCode) {
   textSize(14);
   textAlign(LEFT);
 
-  const textStartY = maxY - 20;
+  const textStartY = maxY - 20; 
   text(`Dept: ${deptCode}`, plotX + 20, textStartY);
   text(`Min: ${data.min.toFixed(1)} €`, plotX + 20, textStartY + 20);
   text(`Q1: ${data.q1.toFixed(1)} €`, plotX + 20, textStartY + 40);
@@ -493,7 +342,7 @@ function drawSinglePolygon(ring, scaleFactor = 1, fillCol = '#ADD8E6') {
   let screenCoords = ring.map(coord => {
     let x = map(coord[0], -5, 10, 50, width - 50);
     let y = map(coord[1], 41, 51, height - 50, 50);
-    return createVector(x, y);
+    return createVector(x, y); 
   });
 
   // 计算质心(屏幕坐标)
@@ -543,9 +392,9 @@ function drawDepartments() {
 
   for (let i = 0; i < features.length; i++) {
     let dept = features[i];
-    let geometryType = dept.geometry.type;
+    let geometryType = dept.geometry.type;     
     let coordinates = dept.geometry.coordinates;
-    let deptCode = dept.properties.code;
+    let deptCode = dept.properties.code;       
     let rentalInfo = rentalData[deptCode];
     let medianPrice = rentalInfo ? rentalInfo.median : null;
 
@@ -595,7 +444,7 @@ function drawDepartments() {
     // 这里为了简单，仍然用原先方法：取外环做质心
     let labelCentroid;
     if (geometryType === "Polygon") {
-      labelCentroid = calculateCentroidGeo(coordinates[0]);
+      labelCentroid = calculateCentroidGeo(coordinates[0]); 
     } else if (geometryType === "MultiPolygon") {
       // 多多边形，简单做法：拼成一个大数组再求质心
       let allPoints = [];
@@ -630,7 +479,7 @@ function drawDepartments() {
 // ✅ **确保数据加载完成后再 redraw()**
 function checkDataLoaded() {
   if (
-    departementsGeoJSON &&
+    departementsGeoJSON && 
     rentalDataArray.length > 0 &&
     etablissementsData.length > 0 &&
     cyclingStationsData.length > 0 &&
@@ -708,19 +557,19 @@ function drawSelectedDeptMap(deptCode) {
   }
 }
 
-function drawBackButton() {
+function drawBackButton(){
   let btnX = 20, btnY = 20;
   let btnW = 80, btnH = 30;
 
   fill(200);
   stroke(0);
-  rect(btnX, btnY, btnW, btnH, 5);
+  rect(btnX, btnY, btnW, btnH, 5); 
 
   fill(0);
   noStroke();
   textAlign(CENTER, CENTER);
   textSize(14);
-  text("Back", btnX + btnW / 2, btnY + btnH / 2);
+  text("Back", btnX + btnW/2, btnY + btnH/2);
 }
 
 function draw() {
@@ -733,7 +582,6 @@ function draw() {
     text("Loading data...", width / 2, height / 2);
     return;
   }
-  hoveredItem = null;
 
   if (selectedDept == null) {
     // —— 全国模式：绘制全国地图 + 租金颜色
@@ -745,10 +593,5 @@ function draw() {
     drawDeptCyclingStations(selectedDept);
     drawDeptEtablissements(selectedDept);
     drawBackButton();
-    drawCapacityLegend();
-    drawIconLegend();
-  }
-  if (hoveredItem) {
-    drawTooltip(hoveredItem);
   }
 }

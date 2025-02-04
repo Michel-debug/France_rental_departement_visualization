@@ -125,43 +125,6 @@ function drawSinglePolygonInBbox(ring, bbox) {
   endShape(CLOSE);
 }
 
-function drawIconLegend() {
-  // 决定一下图例在画布右上角，稍微留点边距
-  let legendX = width - 600;
-  let legendY = 100;
-  let iconSize = 24; 
-  let lineSpacing = 35; // 每行的垂直间距
-  let textOffsetX = 30; // 文字相对图标的水平偏移
-  let boxWidth = 200;
-  let boxHeight = 120; // 大概够放3行
-
-  // 画背景框(可选)
-  fill(255, 230);
-  stroke(0);
-  rect(legendX, legendY, boxWidth, boxHeight, 8);
-
-  // 设置绘制模式
-  imageMode(CORNER);
-  textAlign(LEFT, CENTER);
-  textSize(14);
-  fill(0);
-  noStroke();
-
-  // 第1行: Public school
-  image(publicIcon, legendX + 5, legendY + 5, iconSize, iconSize);
-  text("Public School", legendX + 5 + iconSize + textOffsetX, legendY + 5 + iconSize/2);
-
-  // 第2行: Private school
-  let secondLineY = legendY + 5 + lineSpacing;
-  image(privateIcon, legendX + 5, secondLineY, iconSize, iconSize);
-  text("Private School", legendX + 5 + iconSize + textOffsetX, secondLineY + iconSize/2);
-
-  // 第3行: Bike station
-  let thirdLineY = legendY + 5 + 2 * lineSpacing;
-  image(bikeIcon, legendX + 5, thirdLineY, iconSize, iconSize);
-  text("Cycling Station", legendX + 5 + iconSize + textOffsetX, thirdLineY + iconSize/2);
-}
-
 function drawCapacityLegend() {
   let legendX = width - 200;
   let legendY = 50;
@@ -176,6 +139,8 @@ function drawCapacityLegend() {
     // 直接设置灰度颜色（RGB 相同值）
     fill(grayVal, grayVal, grayVal);
 
+    // 这里简单用蓝色 + alpha
+    fill(0, 0, 255, alphaVal);
     // 画 1px 高度的矩形
     rect(legendX, legendY + (legendH - i), legendW, 1);
   }
@@ -194,11 +159,6 @@ function drawCapacityLegend() {
   text(`high capacity`, legendX + legendW + 10, legendY );
  
   text(`low capacity`, legendX + legendW + 10, legendY + legendH );
-  let iconSize = 20;
-  let iconX = legendX - 15 - iconSize;
-  let iconY = legendY - 15;
-  imageMode(CENTER);
-  image(bikeIcon, iconX, iconY, iconSize, iconSize);
   text("Bike Capacity", legendX - 15, legendY - 15 );
 }
 
@@ -746,7 +706,6 @@ function draw() {
     drawDeptEtablissements(selectedDept);
     drawBackButton();
     drawCapacityLegend();
-    drawIconLegend();
   }
   if (hoveredItem) {
     drawTooltip(hoveredItem);

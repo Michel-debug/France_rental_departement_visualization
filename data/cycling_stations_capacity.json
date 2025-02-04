@@ -1,0 +1,362 @@
+[
+    {
+        "departement_code": "10",
+        "total_capacity": 3482
+    },
+    {
+        "departement_code": "11",
+        "total_capacity": 3462
+    },
+    {
+        "departement_code": "12",
+        "total_capacity": 1668
+    },
+    {
+        "departement_code": "13",
+        "total_capacity": 12110
+    },
+    {
+        "departement_code": "14",
+        "total_capacity": 10576
+    },
+    {
+        "departement_code": "15",
+        "total_capacity": 287
+    },
+    {
+        "departement_code": "16",
+        "total_capacity": 1599
+    },
+    {
+        "departement_code": "17",
+        "total_capacity": 21270
+    },
+    {
+        "departement_code": "18",
+        "total_capacity": 1598
+    },
+    {
+        "departement_code": "19",
+        "total_capacity": 486
+    },
+    {
+        "departement_code": "20",
+        "total_capacity": 12
+    },
+    {
+        "departement_code": "21",
+        "total_capacity": 9780
+    },
+    {
+        "departement_code": "22",
+        "total_capacity": 5371
+    },
+    {
+        "departement_code": "23",
+        "total_capacity": 352
+    },
+    {
+        "departement_code": "24",
+        "total_capacity": 1661
+    },
+    {
+        "departement_code": "25",
+        "total_capacity": 8330
+    },
+    {
+        "departement_code": "26",
+        "total_capacity": 3842
+    },
+    {
+        "departement_code": "27",
+        "total_capacity": 1324
+    },
+    {
+        "departement_code": "28",
+        "total_capacity": 1709
+    },
+    {
+        "departement_code": "29",
+        "total_capacity": 13086
+    },
+    {
+        "departement_code": "2A",
+        "total_capacity": 36
+    },
+    {
+        "departement_code": "2B",
+        "total_capacity": 24
+    },
+    {
+        "departement_code": "30",
+        "total_capacity": 4309
+    },
+    {
+        "departement_code": "31",
+        "total_capacity": 28146
+    },
+    {
+        "departement_code": "32",
+        "total_capacity": 816
+    },
+    {
+        "departement_code": "33",
+        "total_capacity": 33177
+    },
+    {
+        "departement_code": "34",
+        "total_capacity": 15303
+    },
+    {
+        "departement_code": "35",
+        "total_capacity": 28585
+    },
+    {
+        "departement_code": "36",
+        "total_capacity": 661
+    },
+    {
+        "departement_code": "37",
+        "total_capacity": 17673
+    },
+    {
+        "departement_code": "38",
+        "total_capacity": 48721
+    },
+    {
+        "departement_code": "39",
+        "total_capacity": 1861
+    },
+    {
+        "departement_code": "40",
+        "total_capacity": 14823
+    },
+    {
+        "departement_code": "41",
+        "total_capacity": 2095
+    },
+    {
+        "departement_code": "42",
+        "total_capacity": 6408
+    },
+    {
+        "departement_code": "43",
+        "total_capacity": 595
+    },
+    {
+        "departement_code": "44",
+        "total_capacity": 44412
+    },
+    {
+        "departement_code": "45",
+        "total_capacity": 7933
+    },
+    {
+        "departement_code": "46",
+        "total_capacity": 628
+    },
+    {
+        "departement_code": "47",
+        "total_capacity": 1780
+    },
+    {
+        "departement_code": "48",
+        "total_capacity": 125
+    },
+    {
+        "departement_code": "49",
+        "total_capacity": 16841
+    },
+    {
+        "departement_code": "50",
+        "total_capacity": 3740
+    },
+    {
+        "departement_code": "51",
+        "total_capacity": 9987
+    },
+    {
+        "departement_code": "52",
+        "total_capacity": 223
+    },
+    {
+        "departement_code": "53",
+        "total_capacity": 1682
+    },
+    {
+        "departement_code": "54",
+        "total_capacity": 12767
+    },
+    {
+        "departement_code": "55",
+        "total_capacity": 271
+    },
+    {
+        "departement_code": "56",
+        "total_capacity": 12016
+    },
+    {
+        "departement_code": "57",
+        "total_capacity": 7064
+    },
+    {
+        "departement_code": "58",
+        "total_capacity": 955
+    },
+    {
+        "departement_code": "59",
+        "total_capacity": 36407
+    },
+    {
+        "departement_code": "60",
+        "total_capacity": 17049
+    },
+    {
+        "departement_code": "61",
+        "total_capacity": 1823
+    },
+    {
+        "departement_code": "62",
+        "total_capacity": 8609
+    },
+    {
+        "departement_code": "63",
+        "total_capacity": 8834
+    },
+    {
+        "departement_code": "64",
+        "total_capacity": 13592
+    },
+    {
+        "departement_code": "65",
+        "total_capacity": 1159
+    },
+    {
+        "departement_code": "66",
+        "total_capacity": 5291
+    },
+    {
+        "departement_code": "67",
+        "total_capacity": 79279
+    },
+    {
+        "departement_code": "68",
+        "total_capacity": 12681
+    },
+    {
+        "departement_code": "69",
+        "total_capacity": 80481
+    },
+    {
+        "departement_code": "70",
+        "total_capacity": 986
+    },
+    {
+        "departement_code": "71",
+        "total_capacity": 5509
+    },
+    {
+        "departement_code": "72",
+        "total_capacity": 9234
+    },
+    {
+        "departement_code": "73",
+        "total_capacity": 5808
+    },
+    {
+        "departement_code": "74",
+        "total_capacity": 14571
+    },
+    {
+        "departement_code": "75",
+        "total_capacity": 118481
+    },
+    {
+        "departement_code": "76",
+        "total_capacity": 13342
+    },
+    {
+        "departement_code": "77",
+        "total_capacity": 9095
+    },
+    {
+        "departement_code": "78",
+        "total_capacity": 19298
+    },
+    {
+        "departement_code": "79",
+        "total_capacity": 2713
+    },
+    {
+        "departement_code": "80",
+        "total_capacity": 4236
+    },
+    {
+        "departement_code": "81",
+        "total_capacity": 2536
+    },
+    {
+        "departement_code": "82",
+        "total_capacity": 2608
+    },
+    {
+        "departement_code": "83",
+        "total_capacity": 2330
+    },
+    {
+        "departement_code": "84",
+        "total_capacity": 5887
+    },
+    {
+        "departement_code": "85",
+        "total_capacity": 11526
+    },
+    {
+        "departement_code": "86",
+        "total_capacity": 5685
+    },
+    {
+        "departement_code": "87",
+        "total_capacity": 2462
+    },
+    {
+        "departement_code": "88",
+        "total_capacity": 1670
+    },
+    {
+        "departement_code": "89",
+        "total_capacity": 1114
+    },
+    {
+        "departement_code": "90",
+        "total_capacity": 1716
+    },
+    {
+        "departement_code": "91",
+        "total_capacity": 18669
+    },
+    {
+        "departement_code": "92",
+        "total_capacity": 37801
+    },
+    {
+        "departement_code": "93",
+        "total_capacity": 16198
+    },
+    {
+        "departement_code": "94",
+        "total_capacity": 17082
+    },
+    {
+        "departement_code": "95",
+        "total_capacity": 8926
+    },
+    {
+        "departement_code": "97",
+        "total_capacity": 2326
+    },
+    {
+        "departement_code": "98",
+        "total_capacity": 93
+    }
+]

@@ -1,0 +1,527 @@
+[
+    {
+        "departement_code": "10",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 2
+    },
+    {
+        "departement_code": "13",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "13",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "13",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "13",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 2
+    },
+    {
+        "departement_code": "14",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "14",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 3
+    },
+    {
+        "departement_code": "17",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "17",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 2
+    },
+    {
+        "departement_code": "18",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "21",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "21",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "25",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "25",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "29",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "29",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "29",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 4
+    },
+    {
+        "departement_code": "2B",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "30",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "31",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "31",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 2
+    },
+    {
+        "departement_code": "31",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 3
+    },
+    {
+        "departement_code": "31",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 11
+    },
+    {
+        "departement_code": "33",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "33",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "33",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 2
+    },
+    {
+        "departement_code": "33",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 3
+    },
+    {
+        "departement_code": "34",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 2
+    },
+    {
+        "departement_code": "34",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "35",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 2
+    },
+    {
+        "departement_code": "35",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 3
+    },
+    {
+        "departement_code": "37",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "38",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "42",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "44",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "44",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "44",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 2
+    },
+    {
+        "departement_code": "45",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "49",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "49",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 7
+    },
+    {
+        "departement_code": "51",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "51",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 3
+    },
+    {
+        "departement_code": "54",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "54",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "56",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "56",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "57",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "59",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 3
+    },
+    {
+        "departement_code": "59",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 8
+    },
+    {
+        "departement_code": "60",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "60",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 3
+    },
+    {
+        "departement_code": "62",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "63",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "63",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "64",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "64",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "65",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "66",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "67",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "67",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 5
+    },
+    {
+        "departement_code": "68",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "69",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "69",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 2
+    },
+    {
+        "departement_code": "69",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 3
+    },
+    {
+        "departement_code": "69",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 10
+    },
+    {
+        "departement_code": "72",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "72",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "73",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "75",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "75",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 11
+    },
+    {
+        "departement_code": "75",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 5
+    },
+    {
+        "departement_code": "75",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 24
+    },
+    {
+        "departement_code": "76",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "76",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 2
+    },
+    {
+        "departement_code": "76",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 6
+    },
+    {
+        "departement_code": "77",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "77",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "77",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 2
+    },
+    {
+        "departement_code": "78",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "78",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 5
+    },
+    {
+        "departement_code": "80",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "80",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "81",
+        "type d'\u00e9tablissement": "Autre \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "83",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "83",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "84",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "85",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "86",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "86",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "87",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "87",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 1
+    },
+    {
+        "departement_code": "90",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 2
+    },
+    {
+        "departement_code": "91",
+        "type d'\u00e9tablissement": "Grand \u00e9tablissement",
+        "count": 1
+    },
+    {
+        "departement_code": "91",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 2
+    },
+    {
+        "departement_code": "91",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 3
+    },
+    {
+        "departement_code": "92",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "92",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 6
+    },
+    {
+        "departement_code": "93",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 2
+    },
+    {
+        "departement_code": "93",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 3
+    },
+    {
+        "departement_code": "94",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "94",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 9
+    },
+    {
+        "departement_code": "95",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 1
+    },
+    {
+        "departement_code": "95",
+        "type d'\u00e9tablissement": "\u00c9cole",
+        "count": 6
+    },
+    {
+        "departement_code": "97",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 4
+    },
+    {
+        "departement_code": "98",
+        "type d'\u00e9tablissement": "Universit\u00e9",
+        "count": 2
+    }
+]
