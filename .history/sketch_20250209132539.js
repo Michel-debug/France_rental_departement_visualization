@@ -20,15 +20,54 @@ selectedDept = null;
 let deptBbox = null;
 let hoveredItem = null;
 
-let cnv;
 
-let PIE_COLORS = [
-  '#FFC0CB', '#FF69B4', '#FF1493', '#DB7093', '#C71585']
+
+function hslToHex(h, s, l) {
+  l /= 100;
+  const a = s * Math.min(l, 1 - l) / 100;
+  const f = n => {
+    const k = (n + h / 30) % 12;
+    const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+    return Math.round(255 * color).toString(16).padStart(2, '0');
+  };
+  return `#${f(0)}${f(8)}${f(4)}`;
+}
+FRENCH_DEPARTEMENT_COUNT = 101;
+// 生成渐变颜色数组
+const PIE_COLORS = Array.from({ length: FRENCH_DEPARTEMENT_COUNT }, (_, i) => {
+  // t 从 0(第一个部门) ~ 1(最后一个部门)
+  let t = i / (FRENCH_DEPARTEMENT_COUNT - 1);
+
+  // 用于存储最终色彩
+  let colorHex;
+
+  if (t < 0.5) {
+    // —— 前半段：蓝(240°) -> 紫(280°)
+    let subT = t * 2;  // 在 [0,1] 范围内插值
+    let h = lerp(240, 280, subT);   // 色相从 240->280
+    let s = 80;                     // 饱和度固定 80
+    let l = 50;                     // 明度固定 50
+    colorHex = hslToHex(h, s, l);
+  } else {
+    // —— 后半段：紫(280°) -> 红(0°)
+    let subT = (t - 0.5) * 2;  // 依然映射到 [0,1]
+    let h = lerp(280, 0, subT);   // 色相从 280->0
+    let s = 80;
+    let l = 50;
+    colorHex = hslToHex(h, s, l);
+  }
+
+  return colorHex;
+});
+
+// 线性插值函数（p5.js 里自带 lerp()，如果没有可自定义）
+function lerp(start, end, amt) {
+  return start + (end - start) * amt;
+}
 
 
 function setup() {
-  cnv = createCanvas(1400, 1200);
-  cnv.parent('canvas-container');
+  createCanvas(1400, 1200);
   noLoop(); // 等数据加载完成后再 redraw()
 
   startColor = color(135, 206, 250);
@@ -92,7 +131,6 @@ function setup() {
   publicIcon = loadImage('data/public.png');
 }
 
-
 function aggregateEtablissementData() {
   for(let e of etablissementStastic) {
     let dept = e.departement_code;
@@ -117,35 +155,12 @@ function aggregateStations(){
   }
 }
 
-function mergeSmallSlices(entries, threshold=0.02) {
-  let totalValue = entries.reduce((acc, e) => acc + e[1], 0);
-  
-  let merged = [];
-  let othersCount = 0;
-
-  for (let [dept, val] of entries) {
-    let ratio = val / totalValue;
-    if (ratio < threshold) {
-      // 占比过小 → 合并到 “Others”
-      othersCount += val;
-    } else {
-      merged.push([dept, val]);
-    }
-  }
-
-  if (othersCount > 0) {
-    merged.push(["Others", othersCount]);
-  }
-
-  return merged;
-}
-
 
 function drawPieChartEtablissements(pieData, cx, cy, radius) {
   // 1) 计算 total
   let totalValue = 0;
   for (let d in pieData) {
-    totalValue += pieData[d][1];
+    totalValue += pieData[d];
   }
   if (totalValue === 0) return;
 
@@ -155,10 +170,11 @@ function drawPieChartEtablissements(pieData, cx, cy, radius) {
 
   let lastAngle = 0;
   let colorIndex = 0;
-  for (let e in entries) {
+  for (let i = 0; i < entries.length; i++) {
    
-    let dept = entries[e][1][0];
-    let val = entries[e][1][1];
+    
+    let dept = entries[i][0];
+    let val = entries[i][1];
     let angle = (val / totalValue) * TWO_PI;
     fill(PIE_COLORS[colorIndex % PIE_COLORS.length]);
     colorIndex++;
@@ -177,6 +193,7 @@ function drawPieChartEtablissements(pieData, cx, cy, radius) {
     textSize(12);
     textAlign(CENTER, CENTER);
     text(`${dept}\n(${val})`, labelX, labelY);
+
     lastAngle += angle;
   }
   fill(0);
@@ -861,11 +878,7 @@ function draw() {
     // —— 全国模式：绘制全国地图 + 租金颜色
     drawDepartments();    // 即你原先的整块逻辑
     drawLegend();         // 租金图例
-    let entries = Object.entries(etabDeptTotals);
-    entries.sort((a, b) => b[1] - a[1]);
-    entries = mergeSmallSlices(entries, 0.05);
-    console.log("Etablissements by Dept: ", entries);
-    drawPieChartEtablissements(entries, width-150, 550, 120);
+    drawPieChartEtablissements(etabDeptTotals, width-150, 550, 120);
   } else {
     // —— 部门模式：只绘制选中部门 + 该部门内的学校 + 自行车站点
     drawSelectedDeptMap(selectedDept);

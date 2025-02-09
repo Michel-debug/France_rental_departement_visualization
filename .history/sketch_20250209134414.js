@@ -20,15 +20,14 @@ selectedDept = null;
 let deptBbox = null;
 let hoveredItem = null;
 
-let cnv;
 
 let PIE_COLORS = [
   '#FFC0CB', '#FF69B4', '#FF1493', '#DB7093', '#C71585']
 
 
 function setup() {
-  cnv = createCanvas(1400, 1200);
-  cnv.parent('canvas-container');
+  createCanvas(1400, 1200);
+  centerCanvas();
   noLoop(); // 等数据加载完成后再 redraw()
 
   startColor = color(135, 206, 250);
@@ -92,6 +91,14 @@ function setup() {
   publicIcon = loadImage('data/public.png');
 }
 
+function centerCanvas() {
+  let x = (windowWidth - width) / 2;
+  let y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+function windowResized() {
+  centerCanvas();
+}
 
 function aggregateEtablissementData() {
   for(let e of etablissementStastic) {

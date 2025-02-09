@@ -28,7 +28,7 @@ let PIE_COLORS = [
 
 function setup() {
   cnv = createCanvas(1400, 1200);
-  cnv.parent('canvas-container');
+  centerCanvas();
   noLoop(); // 等数据加载完成后再 redraw()
 
   startColor = color(135, 206, 250);
@@ -92,6 +92,14 @@ function setup() {
   publicIcon = loadImage('data/public.png');
 }
 
+function centerCanvas() {
+  let x = (windowWidth - width) / 2;
+  let y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+function windowResized() {
+  centerCanvas();
+}
 
 function aggregateEtablissementData() {
   for(let e of etablissementStastic) {

@@ -9,26 +9,22 @@ let etablissementsData = [];
 let cyclingStationsData = [];
 let bikeIcon;
 
-let etablissementStastic = [];
-let stationDeptData = [];
-let etabDeptTotals = {};
-let stationDeptTotals = {};
-
 let minCap = Infinity, maxCap = -Infinity;
 
 selectedDept = null;
 let deptBbox = null;
 let hoveredItem = null;
 
-let cnv;
-
-let PIE_COLORS = [
-  '#FFC0CB', '#FF69B4', '#FF1493', '#DB7093', '#C71585']
-
+let FRANCE_BBOX = { minLon: -5, maxLon: 10, minLat: 41, maxLat: 51 }; 
+let currentBbox = { ...FRANCE_BBOX };
+let isTransitioning = false;
+let fromBbox = null;
+let toBbox = null;
+let transitionStartFrame = 0;
+let transitionDuration = 60;
 
 function setup() {
-  cnv = createCanvas(1400, 1200);
-  cnv.parent('canvas-container');
+  createCanvas(1400, 1200);
   noLoop(); // 等数据加载完成后再 redraw()
 
   startColor = color(135, 206, 250);
@@ -75,114 +71,10 @@ function setup() {
     checkDataLoaded();
   });
 
-  loadJSON('data/etablissement_statistic.json', function (data) {
-    etablissementStastic = data;
-    console.log("✅ Etablissement stastic data loaded:", etablissementStastic);
-    checkDataLoaded();
-  });
-
-  loadJSON('data/cycling_stations_statistic.json', function (data) {
-    stationDeptData = data;
-    console.log("✅ Cycling station statistic data loaded:", stationDeptData);
-    checkDataLoaded();
-  });
   // load bike icon
   bikeIcon = loadImage('data/bike_station.png');
   privateIcon = loadImage('data/private.png');
   publicIcon = loadImage('data/public.png');
-}
-
-
-function aggregateEtablissementData() {
-  for(let e of etablissementStastic) {
-    let dept = e.departement_code;
-    let c = e.count;
-    if(etabDeptTotals[dept]) {
-      etabDeptTotals[dept] += c;
-    } else {
-      etabDeptTotals[dept] = c;
-    }
-  }
-}
-
-function aggregateStations(){
-  for(let s of stationDeptData) {
-    let dept = s.departement_code;
-    let c = s.count;
-    if(stationDeptTotals[dept]) {
-      stationDeptTotals[dept] += c;
-    } else {
-      stationDeptTotals[dept] = c;
-    }
-  }
-}
-
-function mergeSmallSlices(entries, threshold=0.02) {
-  let totalValue = entries.reduce((acc, e) => acc + e[1], 0);
-  
-  let merged = [];
-  let othersCount = 0;
-
-  for (let [dept, val] of entries) {
-    let ratio = val / totalValue;
-    if (ratio < threshold) {
-      // 占比过小 → 合并到 “Others”
-      othersCount += val;
-    } else {
-      merged.push([dept, val]);
-    }
-  }
-
-  if (othersCount > 0) {
-    merged.push(["Others", othersCount]);
-  }
-
-  return merged;
-}
-
-
-function drawPieChartEtablissements(pieData, cx, cy, radius) {
-  // 1) 计算 total
-  let totalValue = 0;
-  for (let d in pieData) {
-    totalValue += pieData[d][1];
-  }
-  if (totalValue === 0) return;
-
-  // 2) 按照“部门代码”进行绘制（或可先排序）
-  let entries = Object.entries(pieData);
-  entries.sort((a, b) => b[1] - a[1]); 
-
-  let lastAngle = 0;
-  let colorIndex = 0;
-  for (let e in entries) {
-   
-    let dept = entries[e][1][0];
-    let val = entries[e][1][1];
-    let angle = (val / totalValue) * TWO_PI;
-    fill(PIE_COLORS[colorIndex % PIE_COLORS.length]);
-    colorIndex++;
-    
-    stroke(0);
-    arc(cx, cy, radius*2, radius*2, lastAngle, lastAngle + angle, PIE);
-
-    // 可以在扇形中间写 dept code + 数量
-    // 取扇形中心角
-    let midAngle = lastAngle + angle/2;
-    let labelX = cx + (radius*0.6) * cos(midAngle);
-    let labelY = cy + (radius*0.6) * sin(midAngle);
-
-    fill(0);
-    noStroke();
-    textSize(12);
-    textAlign(CENTER, CENTER);
-    text(`${dept}\n(${val})`, labelX, labelY);
-    lastAngle += angle;
-  }
-  fill(0);
-  textSize(14);
-  textAlign(CENTER);
-  text("Etablissements by Dept (Pie)", cx, cy - radius - 20);
 }
 
 function getDeptBoundingBox(deptCode) {
@@ -353,6 +245,48 @@ function mouseClicked() {
     }
   }
 }
+
+function mouseClicked() {
+  if (!dataLoaded) return;
+  
+  if (selectedDept) {
+    let btnX = 20, btnY = 20;
+    let btnW = 80, btnH = 30;
+    if (
+      mouseX >= btnX && mouseX <= btnX + btnW &&
+      mouseY >= btnY && mouseY <= btnY + btnH
+    ) {
+      selectedDept = null;
+      fromBbox = { ...currentBbox };
+      toBbox = { ...FRANCE_BBOX };
+      isTransitioning = true;
+      transitionStartFrame = frameCount;
+      return;
+    }
+    return;
+  }
+
+  let features = departementsGeoJSON.features;
+  let foundDept = null;
+  for (let i = 0; i < features.length; i++) {
+    let dept = features[i];
+    let deptCode = dept.properties.code;
+    let inside = isPointInDept(mouseX, mouseY, dept.geometry);
+    if (inside) {
+      foundDept = deptCode;
+      break;
+    }
+  }
+  if (foundDept) {
+    selectedDept = foundDept;
+    deptBbox = getDeptBoundingBox(selectedDept);
+    fromBbox = { ...currentBbox };
+    toBbox = { ...deptBbox };
+    isTransitioning = true;
+    transitionStartFrame = frameCount;
+  }
+}
+
 function drawDeptEtablissements(deptCode) {
   let bestDist = Infinity;
   // 遍历 etablissementData，过滤出 departement_code == deptCode
@@ -752,13 +686,9 @@ function checkDataLoaded() {
     rentalDataArray.length > 0 &&
     etablissementsData.length > 0 &&
     cyclingStationsData.length > 0 &&
-    etablissementStastic.length > 0 &&
-    stationDeptData.length > 0 &&
     bikeIcon
   ) {
     dataLoaded = true;
-    aggregateEtablissementData();
-    aggregateStations();
     redraw(); // 数据准备就绪后，触发一次初始绘制
   }
 }
@@ -844,6 +774,19 @@ function drawBackButton() {
   textSize(14);
   text("Back", btnX + btnW / 2, btnY + btnH / 2);
 }
+// 其余过渡动画、绘制逻辑都保持不变
+function updateCurrentBbox() {
+  if (!isTransitioning) return;
+  let progress = (frameCount - transitionStartFrame) / transitionDuration;
+  if (progress > 1) progress = 1;
+  currentBbox.minLon = lerp(fromBbox.minLon, toBbox.minLon, progress);
+  currentBbox.maxLon = lerp(fromBbox.maxLon, toBbox.maxLon, progress);
+  currentBbox.minLat = lerp(fromBbox.minLat, toBbox.minLat, progress);
+  currentBbox.maxLat = lerp(fromBbox.maxLat, toBbox.maxLat, progress);
+  if (progress >= 1) {
+    isTransitioning = false;
+  }
+}
 
 function draw() {
   background(255);
@@ -855,18 +798,47 @@ function draw() {
     text("Loading data...", width / 2, height / 2);
     return;
   }
+  updateCurrentBbox();
   hoveredItem = null;
 
   if (selectedDept == null) {
     // —— 全国模式：绘制全国地图 + 租金颜色
     drawDepartments();    // 即你原先的整块逻辑
     drawLegend();         // 租金图例
-    let entries = Object.entries(etabDeptTotals);
-    entries.sort((a, b) => b[1] - a[1]);
-    entries = mergeSmallSlices(entries, 0.05);
-    console.log("Etablissements by Dept: ", entries);
-    drawPieChartEtablissements(entries, width-150, 550, 120);
   } else {
+        // 绘制选中部门 + icon
+        let features = departementsGeoJSON.features;
+        let targetFeature = features.find(f => f.properties.code === selectedDept);
+        if (targetFeature) {
+          let geometryType = targetFeature.geometry.type;
+          let coordinates = targetFeature.geometry.coordinates;
+    
+          fill('#ADD8E6');
+          stroke(50);
+          if (geometryType === "Polygon") {
+            for (let ring of coordinates) {
+              beginShape();
+              for (let coord of ring) {
+                let sx = map(coord[0], currentBbox.minLon, currentBbox.maxLon, 50, width - 50);
+                let sy = map(coord[1], currentBbox.minLat, currentBbox.maxLat, height - 50, 50);
+                vertex(sx, sy);
+              }
+              endShape(CLOSE);
+            }
+          } else if (geometryType === "MultiPolygon") {
+            for (let polygon of coordinates) {
+              for (let ring of polygon) {
+                beginShape();
+                for (let coord of ring) {
+                  let sx = map(coord[0], currentBbox.minLon, currentBbox.maxLon, 50, width - 50);
+                  let sy = map(coord[1], currentBbox.minLat, currentBbox.maxLat, height - 50, 50);
+                  vertex(sx, sy);
+                }
+                endShape(CLOSE);
+              }
+            }
+          }
+        }
     // —— 部门模式：只绘制选中部门 + 该部门内的学校 + 自行车站点
     drawSelectedDeptMap(selectedDept);
     drawDeptCyclingStations(selectedDept);

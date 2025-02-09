@@ -28,7 +28,7 @@ let PIE_COLORS = [
 
 function setup() {
   cnv = createCanvas(1400, 1200);
-  cnv.parent('canvas-container');
+  cnv
   noLoop(); // 等数据加载完成后再 redraw()
 
   startColor = color(135, 206, 250);
