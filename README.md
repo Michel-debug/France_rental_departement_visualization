@@ -1,17 +1,22 @@
 # Rental Affordability Visualization 🏠
 
-Bienvenue! 这是一个用 **p5.js** 绘制的交互式法国租金可视化项目，通过对 **departements.geojson** （法国的行政区边界）和租金统计数据进行可视化，来直观了解各地区的租金中位数分布。  
+Bienvenue! 这是一个用 **p5.js** 绘制的交互式法国租金可视化项目，通过对 **departements.geojson** （法国的行政区边界）和租金统计数据进行可视化，来直观了解各地区的租金中位数分布, 同时可以提供各地区大学分布可视化图以及自行车站点在每个地区的分布，通过地图直观的查看各地区大学与附近周边的自行车设施站点的关系。  
 
 ## 主要功能 ✨
 
 1. **交互式地图**  
    - 鼠标悬停某个部门，区域会 **高亮并放大**，并在页面左上角显示该地区的 **箱线图**（包含 Min, Q1, 中位数, Q3, Max 等统计信息）。  
-   - 地图下方有一个 **渐变图例**，让你可以快速判断不同区域的价格水平。  
-
+   - 地图右上方有一个 **渐变图例**，让你可以快速判断不同区域的价格水平。  
+   - 地图中下方有一个扇形图，用于展示各个地区的大学数量
+   - 对于法国地图的每一个地区，你可以点击相应的地区，比如编号75，然后你就能进去看到具体该地区大学以及自行车的分布状况。
+   
 2. **数据结构**  
    - **departements.geojson**: 包含法国部门的多边形/多多边形数据。  
    - **departement_rental_data.json**: 存储各部门的租金数据（最小值、四分位数、中位数、最大值等）。  
-
+   - **cycing_stations_departements.json**: 存储各部门的自行车站点数量，以及其他相关信息，如容量，是否免费，是否有监控等。
+   - **etablissement_departement.json**: 存储大学相关信息，比如地理坐标x,y。大学名称，大学类型等。
+   - **etablissement_statistic.json**: 统计每个部分大学的数量，用于显示扇形图
+   
 3. **技术细节**  
    - 使用 **p5.js** 的 `map()` 将地理坐标（经纬度）映射到画布坐标。  
    - 自定义的多边形碰撞检测 (`isPointInPolygon()` + 射线法) 实现对鼠标位置的精确判断。  
@@ -67,15 +72,23 @@ Bienvenue! 这是一个用 **p5.js** 绘制的交互式法国租金可视化项�
    git clone https://github.com/xxx/Rental_Affordability_Visualisation.git
    cd Rental_Affordability_Visualisation
    ```
+   
 2. **启动本地服务器**  
    p5.js 通常可以直接本地打开 `index.html` 查看效果，但强烈推荐使用本地服务器：
+   
    ```bash
    # 用 vscode 下载onlive，作为简易的服务器，5500端口
    # 然后浏览器访问 http://localhost:5500
    ```
+   
 3. **交互**  
+   
    - 在地图上 **悬停** 任意部门，观看高亮、放大及租金箱线图。  
-   - 观察右上角渐变图例，了解各地区的价格范围。  
+   - 观察右上角渐变图例，了解各地区的价格范围。    
+
+
+
+另外一种方式：直接访问：https://michel-debug.github.io/France_rental_departement_visualization/
 
 ---
 

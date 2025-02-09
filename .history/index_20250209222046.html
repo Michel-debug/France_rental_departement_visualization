@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental_affordability_Cycling_station_visualisation</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #1b1b1b;
+    }
+    #canvas-container {
+      width: 1400px;      /* 或者用 max-width */
+      margin: 0 auto;     /* 水平居中 */
+      text-align: center; /* 一般用于水平对齐子元素 */
+    }
+  </style>
+
+</head>
+
+<body style="background-color: #FFFFFF !important;">
+  <main>
+    <h1 style="color:black;text-align: center;">Exploring Rental Affordability and Livability in France: An Interactive Data Visualization</h1>
+    <p style="text-align: center;">
+    <strong> Research Question: How affordable is it to rent in France? </strong> <br>
+    <br>
+      In future implementation, we will explore the distribution of cycling stations near the university within each departement. <br>
+      For the current version, we have implemented an interactive map of France, in which we can explore the rental affordability for each department. <br>
+      <p style="text-align: center;">
+        <strong> Data: </strong> Departement data (departements.geojson) and Rental data (departement_rental_data.json) <br> which contains (Q1 and Q3 quantile, average rental price, Min & Max Rents and Department's Code). <br> <br>
+        <strong> Guidelines: When scrolling the mouse over the map, it will be pop a legend square including relevant information (box plot, minimum and maximum rent, etc) to answer our research question.</strong>
+      </p>
+      
+    </p>
+    <div id="canvas-container">
+    </div>
+    <script src="p5.min.js"></script>
+    <!-- <script src="../addons/p5.sound.js"></script> -->
+    <script src="sketch.js"></script>
+  </main>
+</body>
+
+</html>
