@@ -56,3 +56,4 @@ data/department_distance/departement_code_29.json filter=lfs diff=lfs merge=lfs 
 data/department_distance/departement_code_45.json filter=lfs diff=lfs merge=lfs -text
 data/department_distance/departement_code_77.json filter=lfs diff=lfs merge=lfs -text
 data/department_distance/* filter=lfs diff=lfs merge=lfs -text
+data/department_distance/*.json filter=lfs diff=lfs merge=lfs -text
