@@ -32,7 +32,9 @@ let distanceButton;
 let tableDiv;
 
 // MODIFIED: Global variable for precomputed distance data.
-let etabCyclingDistances;
+// let etabCyclingDistances;
+let etabCyclingDistancesCache = {};
+let distanceDataLoadedForDept = false;
 
 // NEW: Global variables for the new cycling station images.
 let redImg, greenImg;
@@ -125,11 +127,11 @@ function setup() {
   //   console.log("✅ Distance JSON loaded:", etabCyclingDistances);
   //   checkDataLoaded();
   // });
-  loadJSON('http://junjie-tech.com:5500/data/etablissement_cycling_station_distance.json', function(data) {
-    etabCyclingDistances = data;
-    console.log("✅ Distance JSON loaded:", etabCyclingDistances);
-    checkDataLoaded();
-});
+//   loadJSON('data/etablissement_cycling_station_distance.json', function(data) {
+//     etabCyclingDistances = data;
+//     console.log("✅ Distance JSON loaded:", etabCyclingDistances);
+//     checkDataLoaded();
+// });
   
   // Load icons
   bikeIcon = loadImage('data/bike_station.png');
@@ -163,6 +165,15 @@ function aggregateStations() {
       stationDeptTotals[dept] = c;
     }
   }
+}
+
+function loadDistanceDataForDept(deptCode, callback){
+  let url = "data/department_distance/departement_code_" + deptCode + ".json";
+  loadJSON(url, function(data){
+    etabCyclingDistancesCache[deptCode] = data;
+    console.log("✅ Distance JSON loaded for dept ${deptCode}", data);
+    if(callback)callback();
+  }); 
 }
 
 /* MODIFIED: New function to count institutions by type for a given department */
@@ -381,6 +392,8 @@ function drawCapacityLegend() {
 
 function mouseClicked() {
   if (!dataLoaded) return;
+
+  // 如果目前还没有选中departement
   if (selectedDept == null) {
     let features = departementsGeoJSON.features;
     let foundDept = null;
@@ -394,32 +407,34 @@ function mouseClicked() {
       }
     }
     if (foundDept) {
-      // console.log("Selected dept: ", foundDept);
       selectedDept = foundDept;
       deptBbox = getDeptBoundingBox(selectedDept);
-      
-      // Look up the full department name from the GeoJSON.
-      let deptFeature = departementsGeoJSON.features.find(f => f.properties.code === foundDept);
-      let deptName = deptFeature && deptFeature.properties.nom ? deptFeature.properties.nom : foundDept;
-      
-      // Update the department info header.
-      let deptInfo = document.getElementById("dept-info");
-      if (deptInfo) {
-        deptInfo.querySelector("h1").innerHTML = "Department Details: " + deptName;
+
+      // --- 1) 更新前端界面 ---
+      updateDeptInfoPanel(foundDept);
+
+      // --- 2) 按需加载 distance 文件 ---
+      // 如果缓存里还没有这个dept的数据，就请求一次
+      if (!etabCyclingDistancesCache[selectedDept]) {
+        console.log("Loading distance file for dept =", selectedDept);
+        distanceDataLoadedForDept = false;
+        loadDistanceDataForDept(selectedDept, () => {
+          distanceDataLoadedForDept = true;
+          // 加载完成后，手动触发一次 redraw() 以渲染新数据
+          redraw();
+        });
+      } else {
+        // 如果缓存里已经有了，就不用再load
+        distanceDataLoadedForDept = true;
       }
-      
-      // Hide the main info-panel and show the department info.
-      let infoPanel = document.getElementById("info-panel");
-      if (infoPanel) infoPanel.style.display = "none";
-      if (deptInfo) deptInfo.style.display = "block";
-      
-      // Show the table container.
-      let tableContainer = document.getElementById("table-container");
-      if (tableContainer) tableContainer.style.display = "block";
-      
+
+      // 隐藏/显示一些DOM元素
+      toggleDeptUI(true);
+
       redraw();
     }
   } else {
+    // 如果部门已选中，检查是否点了Back按钮
     let btnX = 20, btnY = 20;
     let btnW = 80, btnH = 30;
     if (
@@ -427,40 +442,12 @@ function mouseClicked() {
       mouseY >= btnY && mouseY <= btnY + btnH
     ) {
       // "Back" button pressed.
-      selectedDept = null;
-      deptBbox = null;
-      if (distanceInput) {
-        distanceInput.remove();
-        distanceInput = null;
-      }
-      if (distanceButton) {
-        distanceButton.remove();
-        distanceButton = null;
-      }
-      if (tableDiv) {
-        tableDiv.remove();
-        tableDiv = null;
-      }
-      // Hide the table container.
-      let tableContainer = document.getElementById("table-container");
-      if (tableContainer) tableContainer.style.display = "none";
-      // Hide the department info and show the main info-panel.
-      let deptInfo = document.getElementById("dept-info");
-      if (deptInfo) deptInfo.style.display = "none";
-      let infoPanel = document.getElementById("info-panel");
-      if (infoPanel) infoPanel.style.display = "block";
-      
-      // NEW: Remove the extra map canvas if it exists.
-      if (extraMap) {
-        extraMap.remove();
-        extraMap = null;
-        document.getElementById("extra-map-container").style.display = "none";
-      }
-      
+      resetToNationwideView();
       redraw();
     }
   }
 }
+
 
 function drawDeptEtablissements(deptCode) {
   let bestDist = Infinity;
@@ -791,8 +778,10 @@ function getScreenCoord(lon, lat, bbox) {
 */
 function generateDistanceTable(deptCode, maxDistance) {
   // Filter records by department.
-  let rows = etabCyclingDistances.filter(rec => rec.departement_code === deptCode);
-  
+  let rows = etabCyclingDistancesCache[deptCode];
+  if(!rows){
+    console.warn("Distance data for dept", deptCode, "not loaded yet!");
+  }
   // Sort rows in ascending order by the "distance" property.
   rows.sort((a, b) => a.distance - b.distance);
   
@@ -830,7 +819,6 @@ function checkDataLoaded() {
     cyclingStationsData.length > 0 &&
     etablissementStastic.length > 0 &&
     stationDeptData.length > 0 &&
-    etabCyclingDistances &&  // Check that the distance JSON is loaded
     bikeIcon
   ) {
     dataLoaded = true;
@@ -962,6 +950,69 @@ function drawBackButton() {
   textAlign(CENTER, CENTER);
   textSize(14);
   text("Back", btnX + btnW / 2, btnY + btnH / 2);
+}
+
+function updateDeptInfoPanel(deptCode) {
+  let deptFeature = departementsGeoJSON.features.find(f => f.properties.code === deptCode);
+  let deptName = deptFeature && deptFeature.properties.nom ? deptFeature.properties.nom : deptCode;
+
+  let deptInfo = document.getElementById("dept-info");
+  if (deptInfo) {
+    deptInfo.querySelector("h1").innerHTML = "Department Details: " + deptName;
+  }
+
+  let infoPanel = document.getElementById("info-panel");
+  if (infoPanel) infoPanel.style.display = "none";
+  if (deptInfo) deptInfo.style.display = "block";
+
+  let tableContainer = document.getElementById("table-container");
+  if (tableContainer) tableContainer.style.display = "block";
+}
+
+function toggleDeptUI(show) {
+  let infoPanel = document.getElementById("info-panel");
+  let deptInfo = document.getElementById("dept-info");
+  let tableContainer = document.getElementById("table-container");
+
+  if (show) {
+    if (infoPanel) infoPanel.style.display = "none";
+    if (deptInfo) deptInfo.style.display = "block";
+    if (tableContainer) tableContainer.style.display = "block";
+  } else {
+    if (infoPanel) infoPanel.style.display = "block";
+    if (deptInfo) deptInfo.style.display = "none";
+    if (tableContainer) tableContainer.style.display = "none";
+  }
+}
+
+function resetToNationwideView() {
+  selectedDept = null;
+  deptBbox = null;
+  if (distanceInput) {
+    distanceInput.remove();
+    distanceInput = null;
+  }
+  if (distanceButton) {
+    distanceButton.remove();
+    distanceButton = null;
+  }
+  if (tableDiv) {
+    tableDiv.remove();
+    tableDiv = null;
+  }
+  let tableContainer = document.getElementById("table-container");
+  if (tableContainer) tableContainer.style.display = "none";
+  let deptInfo = document.getElementById("dept-info");
+  if (deptInfo) deptInfo.style.display = "none";
+  let infoPanel = document.getElementById("info-panel");
+  if (infoPanel) infoPanel.style.display = "block";
+
+  // 同时移除extraMap的canvas等
+  if (extraMap) {
+    extraMap.remove();
+    extraMap = null;
+    document.getElementById("extra-map-container").style.display = "none";
+  }
 }
 
 function draw() {
