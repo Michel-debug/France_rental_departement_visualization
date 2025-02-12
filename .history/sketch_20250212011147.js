@@ -125,11 +125,6 @@ function setup() {
   //   console.log("✅ Distance JSON loaded:", etabCyclingDistances);
   //   checkDataLoaded();
   // });
-  loadJSON('http://junjie-tech.com:5500/data/etablissement_cycling_station_distance.json', function(data) {
-    etabCyclingDistances = data;
-    console.log("✅ Distance JSON loaded:", etabCyclingDistances);
-    checkDataLoaded();
-});
   
   // Load icons
   bikeIcon = loadImage('data/bike_station.png');
