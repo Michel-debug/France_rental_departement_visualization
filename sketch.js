@@ -1,42 +1,44 @@
+/************************************************************
+ * Global Variables
+ ************************************************************/
 // (Other global variables remain unchanged)
-let rentalData = {}; // 存储租金数据（字典格式）
+let rentalData = {}; // Store rental data (in dictionary format)
 let rentalDataArray = [];
 let departementsGeoJSON;
-let dataLoaded = false; // 数据加载标志
+let dataLoaded = false; // Data loaded flag
 const MIN_PRICE = 5;
 const MAX_PRICE = 30;
 
-let etablissementsData = [];
-let cyclingStationsData = [];
-let bikeIcon;
+let etablissementsData = []; // Array to store institution data
+let cyclingStationsData = []; // Array to store cycling station data
+let bikeIcon; // Icon for bike stations
 
-let etablissementStastic = [];
-let stationDeptData = [];
-let etabDeptTotals = {};
-let stationDeptTotals = {};
+let etablissementStastic = []; // Array to store institution statistics
+let stationDeptData = []; // Array to store cycling station statistics per department
+let etabDeptTotals = {}; // Totals of institutions per department
+let stationDeptTotals = {}; // Totals of cycling stations per department
 
-let minCap = Infinity, maxCap = -Infinity;
+let minCap = Infinity, maxCap = -Infinity; // Variables to track minimum and maximum capacities
 
-selectedDept = null;
-let deptBbox = null;
-let hoveredItem = null;
+selectedDept = null; // Currently selected department (if any)
+let deptBbox = null; // Bounding box for the selected department
+let hoveredItem = null; // Currently hovered item on the canvas
 
-let cnv;
+let cnv; // p5.js canvas
 
-// MODIFIED: Global variable to store the currently hovered department code.
+// Global variable to store the currently hovered department code.
 let currentHoveredDept = null;
 
-// MODIFIED: Global DOM elements for the distance input panel.
+// Global DOM elements for the distance input panel.
 let distanceInput;
 let distanceButton;
 let tableDiv;
 
-// MODIFIED: Global variable for precomputed distance data.
-// let etabCyclingDistances;
+// Global variable for precomputed distance data cache.
 let etabCyclingDistancesCache = {};
 let distanceDataLoadedForDept = false;
 
-// NEW: Global variables for the new cycling station images.
+// Global variables for the new cycling station images.
 let redImg, greenImg;
 
 let extraMap; // p5.Graphics object for the extra (third) canvas in department mode
@@ -47,18 +49,25 @@ let distanceSubmitted = false;  // GLOBAL: flag set when the user submits a dist
 let redStations = [];
 let greenStations = [];
 
-// MODIFIED: Global variable and functions for station highlighting.
+// Global variable and functions for station highlighting.
 let highlightStationCoord = null;
 function highlightStation(x, y) {
+  // Set the coordinate for the highlighted station marker
   highlightStationCoord = createVector(x, y);
 }
 function clearHighlightStation() {
+  // Clear the highlighted station marker
   highlightStationCoord = null;
 }
 
 let PIE_COLORS = [
   '#FFC0CB', '#FF69B4', '#FF1493', '#DB7093', '#C71585'
 ];
+
+
+/************************************************************
+ * Setup Function - Initializes Canvas, Colors, and Loads Data
+ ************************************************************/
 
 function setup() {
   // Attach canvas to "map-container"
@@ -83,7 +92,7 @@ function setup() {
     checkDataLoaded();
   });
 
-  // Load GeoJSON
+  // Load GeoJSON for department boundaries
   loadJSON('data/departements.geojson', function (data) {
     departementsGeoJSON = data;
     console.log("✅ GeoJSON loaded:", departementsGeoJSON);
@@ -102,47 +111,42 @@ function setup() {
     checkDataLoaded();
   });
 
-  // Load etablissement data
+  // Load institution data
   loadJSON('data/etablissement_departement.json', function (data) {
     etablissementsData = data;
     console.log("✅ Etablissement data loaded:", etablissementsData);
     checkDataLoaded();
   });
 
+  // Load institution statistics data
   loadJSON('data/etablissement_statistic.json', function (data) {
     etablissementStastic = data;
     console.log("✅ Etablissement statistic loaded:", etablissementStastic);
     checkDataLoaded();
   });
 
+  // Load cycling station statistics data
   loadJSON('data/cycling_stations_statistic.json', function (data) {
     stationDeptData = data;
     console.log("✅ Cycling station statistic loaded:", stationDeptData);
     checkDataLoaded();
   });
   
-  // MODIFIED: Load the precomputed distances JSON
-  // loadJSON('data/etablissement_cycling_station_distance.json', function(data) {
-  //   etabCyclingDistances = data;
-  //   console.log("✅ Distance JSON loaded:", etabCyclingDistances);
-  //   checkDataLoaded();
-  // });
-//   loadJSON('data/etablissement_cycling_station_distance.json', function(data) {
-//     etabCyclingDistances = data;
-//     console.log("✅ Distance JSON loaded:", etabCyclingDistances);
-//     checkDataLoaded();
-// });
-  
-  // Load icons
+  // Load icons for bike stations and schools
   bikeIcon = loadImage('data/bike_station.png');
   privateIcon = loadImage('data/private.png');
   publicIcon = loadImage('data/public.png');
   
-  // NEW: Load new cycling station images (red and green)
+  // Load new cycling station images (red and green)
   redImg = loadImage('data/marker_map_bike_red.png');
   greenImg = loadImage('data/marker_map_bike_green.png');
 }
 
+/************************************************************
+ * Data Aggregation Functions
+ ************************************************************/
+
+// Aggregate institution statistics per department
 function aggregateEtablissementData() {
   for (let e of etablissementStastic) {
     let dept = e.departement_code;
@@ -155,6 +159,8 @@ function aggregateEtablissementData() {
   }
 }
 
+
+// Aggregate cycling station statistics per department
 function aggregateStations() {
   for (let s of stationDeptData) {
     let dept = s.departement_code;
@@ -167,6 +173,10 @@ function aggregateStations() {
   }
 }
 
+/************************************************************
+ * Data Loading Helper for Distance Data per Department
+ ************************************************************/
+
 function loadDistanceDataForDept(deptCode, callback){
   let url = "data/department_distance/departement_code_" + deptCode + ".json";
   loadJSON(url, function(data){
@@ -176,7 +186,13 @@ function loadDistanceDataForDept(deptCode, callback){
   }); 
 }
 
-/* MODIFIED: New function to count institutions by type for a given department */
+
+
+/************************************************************
+ * Utility Functions for Institutions and Pie Charts
+ ************************************************************/
+// MODIFIED: New function to count institutions by type for a given department
+
 function countInstitutionsByType(deptCode) {
   let counts = { "Université": 0, "École": 0, "Grand établissement": 0 };
   for (let e of etablissementsData) {
@@ -194,6 +210,7 @@ function countInstitutionsByType(deptCode) {
   return counts;
 }
 
+// Merge small slices for pie chart (merges entries below a threshold)
 function mergeSmallSlices(entries, threshold = 0.02) {
   let totalValue = entries.reduce((acc, e) => acc + e[1], 0);
   let merged = [];
@@ -212,6 +229,7 @@ function mergeSmallSlices(entries, threshold = 0.02) {
   return merged;
 }
 
+// Draw pie chart for institutions (version using etablissementStastic data)
 function drawPieChartEtablissements(pieData, cx, cy, radius) {
   let totalValue = 0;
   for (let d in pieData) {
@@ -246,7 +264,7 @@ function drawPieChartEtablissements(pieData, cx, cy, radius) {
   text("Etablissements by Dept (Pie)", cx, cy - radius - 20);
 }
 
-/* MODIFIED: New function to draw a pie chart for institutions breakdown */
+// MODIFIED: New function to draw a pie chart for institutions breakdown by type
 function drawPieChartInstitutions(pieData, cx, cy, radius) {
   let totalValue = 0;
   for (let key in pieData) {
@@ -283,6 +301,11 @@ function drawPieChartInstitutions(pieData, cx, cy, radius) {
   text("Institutions", cx, cy - radius - 20);
 }
 
+/************************************************************
+ * Geometry Helper Functions
+ ************************************************************/
+
+// Get bounding box for a department from GeoJSON data
 function getDeptBoundingBox(deptCode) {
   let features = departementsGeoJSON.features;
   let geom = null;
@@ -323,6 +346,7 @@ function getDeptBoundingBox(deptCode) {
   return { minLon, maxLon, minLat, maxLat };
 }
 
+// Draw a single polygon (ring) scaled to the provided bounding box
 function drawSinglePolygonInBbox(ring, bbox) {
   beginShape();
   for (let coord of ring) {
@@ -335,6 +359,11 @@ function drawSinglePolygonInBbox(ring, bbox) {
   endShape(CLOSE);
 }
 
+/************************************************************
+ * Legend Drawing Functions
+ ************************************************************/
+
+// Draw the icon legend for public/private schools and cycling stations
 function drawIconLegend() {
   let legendX = width - 600;
   let legendY = 100;
@@ -361,6 +390,8 @@ function drawIconLegend() {
   text("Cycling Station", legendX + 5 + iconSize + textOffsetX, thirdLineY + iconSize / 2);
 }
 
+
+// Draw the capacity legend indicating bike station capacity using grayscale
 function drawCapacityLegend() {
   let legendX = width - 200;
   let legendY = 50;
@@ -390,10 +421,15 @@ function drawCapacityLegend() {
   text("Bike Capacity", legendX - 15, legendY - 15);
 }
 
+/************************************************************
+ * Mouse Event Handlers
+ ************************************************************/
+
+// Handle mouse click events on the canvas
 function mouseClicked() {
   if (!dataLoaded) return;
 
-  // 如果目前还没有选中departement
+  // If no department is currently selected
   if (selectedDept == null) {
     let features = departementsGeoJSON.features;
     let foundDept = null;
@@ -410,31 +446,31 @@ function mouseClicked() {
       selectedDept = foundDept;
       deptBbox = getDeptBoundingBox(selectedDept);
 
-      // --- 1) 更新前端界面 ---
+      // --- 1) Update the frontend UI panel ---
       updateDeptInfoPanel(foundDept);
 
-      // --- 2) 按需加载 distance 文件 ---
-      // 如果缓存里还没有这个dept的数据，就请求一次
+      // --- 2) Load distance file as needed ---
+      // If this department's distance data is not cached, request it
       if (!etabCyclingDistancesCache[selectedDept]) {
         console.log("Loading distance file for dept =", selectedDept);
         distanceDataLoadedForDept = false;
         loadDistanceDataForDept(selectedDept, () => {
           distanceDataLoadedForDept = true;
-          // 加载完成后，手动触发一次 redraw() 以渲染新数据
+          // Once loaded, manually trigger redraw() to render new data
           redraw();
         });
       } else {
-        // 如果缓存里已经有了，就不用再load
+        // If already cached, no need to load again
         distanceDataLoadedForDept = true;
       }
 
-      // 隐藏/显示一些DOM元素
+      // Toggle visibility of some DOM elements
       toggleDeptUI(true);
 
       redraw();
     }
   } else {
-    // 如果部门已选中，检查是否点了Back按钮
+    // If a department is selected, check if the Back button was clicked
     let btnX = 20, btnY = 20;
     let btnW = 80, btnH = 30;
     if (
@@ -448,7 +484,11 @@ function mouseClicked() {
   }
 }
 
+/************************************************************
+ * Department Mode Drawing Functions
+ ************************************************************/
 
+// Draw institution icons for the selected department
 function drawDeptEtablissements(deptCode) {
   let bestDist = Infinity;
   for (let e of etablissementsData) {
@@ -469,18 +509,17 @@ function drawDeptEtablissements(deptCode) {
       }
     }
   }
-}
 
+}// Draw cycling stations for the selected department with hover detection and optional highlighting
 function drawDeptCyclingStations(deptCode) {
   let bestDist = Infinity;
   let flickerAlpha = 200 + 55 * sin(frameCount * 0.2);
 
-  // 如果你想对照 highlightRows 做一个 Map 方便查找，可以预先建一个
-  // stationId => distance
+  // If you want to cross-check highlightRows for easier lookup, pre-build a map
   let highlightMap = {};
   if (highlightRows && highlightRows.length > 0) {
     highlightRows.forEach(row => {
-      // 如果你的数据结构里有唯一ID，可以用 ID 做key。如果没有就需要用坐标等拼成key
+      // If your data structure has a unique ID, you can use it as the key; otherwise, combine coordinates
       let key = `${row.X_station}-${row.Y_station}`;
       highlightMap[key] = row.distance;
     });
@@ -494,9 +533,8 @@ function drawDeptCyclingStations(deptCode) {
     let sx = map(lon, deptBbox.minLon, deptBbox.maxLon, 50, width - 50);
     let sy = map(lat, deptBbox.minLat, deptBbox.maxLat, height - 50, 50);
 
-    // 先看看此 station 是否在 highlightMap 里
+    // Check if this station is in the highlight map; if not, draw the default or flickering icon
     let key = `${station.X}-${station.Y}`;
-      // 不在高亮列表中，就画默认或闪烁的图标
       let capacite = station.capacite;
       let baseAlpha = map(capacite, minCap, maxCap, 80, 255);
       let alphaVal = lerp(baseAlpha, flickerAlpha, 0.5);
@@ -507,7 +545,7 @@ function drawDeptCyclingStations(deptCode) {
       pop();
     
 
-    // 下面是你原先做 hover 检测的逻辑
+    // Hover detection for cycling station markers
     let d = dist(mouseX, mouseY, sx, sy);
     if (d < 12 && d < bestDist) {
       bestDist = d;
@@ -516,16 +554,22 @@ function drawDeptCyclingStations(deptCode) {
   }
 }
 
+/************************************************************
+ * Tooltip Drawing Function
+ ************************************************************/
 
+// Draw tooltip for the hovered item (cycling station or institution)
 function drawTooltip(item) {
     let infoText = "";
     if (item.type === "station") {
       let st = item.data;
       infoText = `Cycling Station
+        Coordinates_XY: (${st.X}, ${st.Y})
         Capacity: ${st.capacite}
         Access: ${st.acces}
         Furniture: ${st.mobilier}
-        Free: ${st.gratuit}`;
+        Free: ${st.gratuit}
+        Surveillance: ${st.surveillance}`;
     } else if (item.type === "etablissement") {
       let e = item.data;
       infoText = `Institution Name: ${e["name"]}
@@ -564,12 +608,25 @@ function drawTooltip(item) {
   }
 }
 
+
+/************************************************************
+ * Mouse Movement Handler
+ ************************************************************/
+
+// Redraw on mouse movement if data is loaded
 function mouseMoved() {
   if (dataLoaded) {
     redraw();
   }
 }
 
+
+
+/************************************************************
+ * Geometry Intersection Helpers
+ ************************************************************/
+
+// Check if a given point (x, y) is inside a department's geometry
 function isPointInDept(x, y, geometry) {
   const coords = geometry.coordinates;
   const type = geometry.type;
@@ -584,6 +641,8 @@ function isPointInDept(x, y, geometry) {
   return false;
 }
 
+
+// Check if a point is inside any polygon in the given coordinates array
 function checkPolygon(x, y, coordinates) {
   const screenPoly = coordinates[0].map(coord => {
     const px = map(coord[0], -5, 10, 50, width - 50);
@@ -593,6 +652,7 @@ function checkPolygon(x, y, coordinates) {
   return isPointInPolygon(x, y, screenPoly);
 }
 
+// Ray-casting algorithm to determine if point is in polygon
 function isPointInPolygon(x, y, polygon) {
   let inside = false;
   for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
@@ -605,6 +665,13 @@ function isPointInPolygon(x, y, polygon) {
   return inside;
 }
 
+
+
+/************************************************************
+ * Box Plot Drawing Function for Rental Data
+ ************************************************************/
+
+// Draw a box plot for rental data of the given department
 function drawBoxPlot(deptCode) {
   const data = rentalData[deptCode];
   if (!data || !data.min || !data.q1 || !data.median || !data.q3 || !data.max) return;
@@ -655,6 +722,12 @@ function drawBoxPlot(deptCode) {
   text(`Max: ${data.max.toFixed(1)} €`, plotX + 20, textStartY + 100);
 }
 
+
+/************************************************************
+ * Polygon Drawing and Centroid Calculation Functions
+ ************************************************************/
+
+// Draw a single polygon with scaling and fill color
 function drawSinglePolygon(ring, scaleFactor = 1, fillCol = '#ADD8E6') {
   let screenCoords = ring.map(coord => {
     let x = map(coord[0], -5, 10, 50, width - 50);
@@ -673,6 +746,8 @@ function drawSinglePolygon(ring, scaleFactor = 1, fillCol = '#ADD8E6') {
   endShape(CLOSE);
 }
 
+
+// Calculate the centroid of a polygon in screen coordinates
 function calculateCentroidScreen(screenCoords) {
   if (!screenCoords || screenCoords.length === 0) return createVector(0, 0);
   let xSum = 0, ySum = 0;
@@ -684,6 +759,7 @@ function calculateCentroidScreen(screenCoords) {
   return createVector(xSum / len, ySum / len);
 }
 
+// Calculate the centroid of a polygon using geographic coordinates
 function calculateCentroidGeo(ring) {
   let xSum = 0, ySum = 0;
   for (let coord of ring) {
@@ -694,6 +770,12 @@ function calculateCentroidGeo(ring) {
   return [xSum / len, ySum / len];
 }
 
+
+/************************************************************
+ * Nationwide Map Drawing Function
+ ************************************************************/
+
+// Draw all departments nationwide, color-coded by rental median
 function drawDepartments() {
   let features = departementsGeoJSON.features;
   let hoveredDept = null;
@@ -730,8 +812,9 @@ function drawDepartments() {
         }
       }
     } else {
-      // console.warn("未知的几何类型: ", geometryType);
-    }
+      // Unknown geometry type: 
+      // console.warn("Unknown geometry type: ", geometryType);
+      }
     let labelCentroid;
     if (geometryType === "Polygon") {
       labelCentroid = calculateCentroidGeo(coordinates[0]);
@@ -764,17 +847,20 @@ function drawDepartments() {
   }
 }
 
-// Helper function to map geographic coordinates to screen coordinates.
+// Helper function to map geographic coordinates to screen coordinates using a bounding box.
 function getScreenCoord(lon, lat, bbox) {
   let sx = map(lon, bbox.minLon, bbox.maxLon, 50, width - 50);
   let sy = map(lat, bbox.minLat, bbox.maxLat, height - 50, 50);
   return createVector(sx, sy);
 }
 
+/************************************************************
+ * Distance Table Generation Function
+ ************************************************************/
 /* MODIFIED: Generates an HTML table using the precomputed distances JSON.
    It filters records for the given department, sorts them in ascending order
-   by the "distance" field, limits the table to the first 30 records, and then creates rows.
-   It also saves these rows globally for highlighting.
+   by the "distance" field, limits the table to the first 500 records, and then creates rows.
+   It also saves these rows globally for highlighting on the map.
 */
 function generateDistanceTable(deptCode, maxDistance) {
   // Filter records by department.
@@ -786,7 +872,7 @@ function generateDistanceTable(deptCode, maxDistance) {
   rows.sort((a, b) => a.distance - b.distance);
   
   // Limit the table to the first 30 cycling stations.
-  rows = rows.slice(0, 500);
+  rows = rows.slice(0, 300);
   
   // Save these rows globally for use in highlighting on the map.
   highlightRows = rows;
@@ -811,6 +897,10 @@ function generateDistanceTable(deptCode, maxDistance) {
   return tableHTML;
 }
 
+/************************************************************
+ * Data Loading Check and Aggregation Trigger
+ ************************************************************/
+
 function checkDataLoaded() {
   if (
     departementsGeoJSON &&
@@ -828,6 +918,12 @@ function checkDataLoaded() {
   }
 }
 
+
+/************************************************************
+ * Legend and Extra Map Setup Functions
+ ************************************************************/
+
+// Draw the rental price legend on the canvas
 function drawLegend() {
   let legendX = width - 60;
   let legendY = 50;
@@ -853,17 +949,18 @@ function drawLegend() {
   text("Rent average", legendX - 15, legendY - 15);
 }
 
+// Setup the extra map canvas (for detailed department view)
 function setupExtraMap() {
   // Create the extra map graphics only once and attach its canvas to the extra container.
   if (!extraMap) {
     extraMap = createGraphics(800, 600);
-    // <-- Change here: use extraMap.parent(), not extraMap.canvas.parent()
     extraMap.parent("extra-map-container");
     // Make sure the extra container is visible in department mode.
     document.getElementById("extra-map-container").style.display = "block";
   }
 }
 
+// Draw the extra map for department view showing the detailed department boundary
 function drawExtraMap() {
   if (!extraMap || !selectedDept || !deptBbox) return;
   
@@ -909,6 +1006,13 @@ function drawExtraMap() {
   
 }
 
+
+/************************************************************
+ * Department Selection Map Functions
+ ************************************************************/
+
+
+// Draw the selected department map using its bounding box
 function drawSelectedDeptMap(deptCode) {
   let features = departementsGeoJSON.features;
   let targetFeature = null;
@@ -939,6 +1043,7 @@ function drawSelectedDeptMap(deptCode) {
   }
 }
 
+// Draw the "Back" button for returning to nationwide view
 function drawBackButton() {
   let btnX = 20, btnY = 20;
   let btnW = 80, btnH = 30;
@@ -952,6 +1057,11 @@ function drawBackButton() {
   text("Back", btnX + btnW / 2, btnY + btnH / 2);
 }
 
+/************************************************************
+ * UI Update and Toggle Functions
+ ************************************************************/
+
+// Update the department information panel in the UI with details for the selected department
 function updateDeptInfoPanel(deptCode) {
   let deptFeature = departementsGeoJSON.features.find(f => f.properties.code === deptCode);
   let deptName = deptFeature && deptFeature.properties.nom ? deptFeature.properties.nom : deptCode;
@@ -969,6 +1079,7 @@ function updateDeptInfoPanel(deptCode) {
   if (tableContainer) tableContainer.style.display = "block";
 }
 
+// Toggle UI elements for department view
 function toggleDeptUI(show) {
   let infoPanel = document.getElementById("info-panel");
   let deptInfo = document.getElementById("dept-info");
@@ -985,6 +1096,7 @@ function toggleDeptUI(show) {
   }
 }
 
+// Reset the view to nationwide mode (deselect department)
 function resetToNationwideView() {
   selectedDept = null;
   deptBbox = null;
@@ -1007,7 +1119,7 @@ function resetToNationwideView() {
   let infoPanel = document.getElementById("info-panel");
   if (infoPanel) infoPanel.style.display = "block";
 
-  // 同时移除extraMap的canvas等
+  // Also remove the extraMap canvas and hide its container
   if (extraMap) {
     extraMap.remove();
     extraMap = null;
@@ -1015,6 +1127,12 @@ function resetToNationwideView() {
   }
 }
 
+/************************************************************
+ * Main Draw Function
+ ************************************************************/
+
+
+// Main draw loop: updates the canvas drawing based on current state (nationwide or department view)
 function draw() {
   background(255);
   if (!dataLoaded) {
@@ -1040,7 +1158,7 @@ function draw() {
   }
   
   if (selectedDept == null) {
-    // Nationwide mode
+    // Nationwide mode: draw all departments and legends
     drawDepartments();
     drawLegend();
     if (currentHoveredDept) {
@@ -1048,7 +1166,7 @@ function draw() {
       drawPieChartInstitutions(instCounts, width - 150, 550, 120);
     }
   } else {
-    // Department mode
+    // Department mode: draw detailed view for the selected department
     drawSelectedDeptMap(selectedDept);
     drawDeptCyclingStations(selectedDept);
     drawDeptEtablissements(selectedDept);
@@ -1088,11 +1206,9 @@ function draw() {
         // console.log("rec",rec);
         if (rec.distance <= currentMaxDistance) {
           // Use green image if condition is satisfied.
-          // image(greenImg, stCoord.x - 10, stCoord.y - 10, 20, 20);
           greenStations.push(rec);
         } else {
           // Use red image otherwise.
-          // image(redImg, stCoord.x - 10, stCoord.y - 10, 20, 20);
           redStations.push(rec);
         }
       }
@@ -1117,7 +1233,7 @@ function draw() {
       pop();
     }
     
-    // NEW: Only create and draw the extra map after the user has submitted a distance.
+    // Only create and draw the extra map after the user has submitted a distance.
     if (distanceSubmitted) {
       setupExtraMap();
       drawExtraMap();
