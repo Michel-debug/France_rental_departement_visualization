@@ -142,6 +142,23 @@ function setup() {
   greenImg = loadImage('data/marker_map_bike_green.png');
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /************************************************************
  * Data Aggregation Functions
  ************************************************************/
@@ -509,8 +526,10 @@ function drawDeptEtablissements(deptCode) {
       }
     }
   }
+}
 
-}// Draw cycling stations for the selected department with hover detection and optional highlighting
+
+// Draw cycling stations for the selected department with hover detection and optional highlighting
 function drawDeptCyclingStations(deptCode) {
   let bestDist = Infinity;
   let flickerAlpha = 200 + 55 * sin(frameCount * 0.2);
@@ -553,6 +572,19 @@ function drawDeptCyclingStations(deptCode) {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /************************************************************
  * Tooltip Drawing Function
@@ -879,7 +911,7 @@ function generateDistanceTable(deptCode, maxDistance) {
   currentMaxDistance = maxDistance;
   
   let tableHTML = "<table border='1' cellpadding='4' cellspacing='0'>";
-  tableHTML += "<tr><th>Institution</th><th>  Cycling Station</th><th>Distance</th><th>Within " + maxDistance + "?</th></tr>";
+  tableHTML += "<tr><th>Institution</th><th>  Cycling Station</th><th>Distance (km)</th><th>Within " + maxDistance + "?</th></tr>";
   
   for (let rec of rows) {
     let mark = (rec.distance <= maxDistance) ? "✔" : "✖";
@@ -1005,6 +1037,14 @@ function drawExtraMap() {
   }
   
 }
+
+
+
+
+
+
+
+
 
 
 /************************************************************
@@ -1180,7 +1220,7 @@ function draw() {
       distanceInput.parent("table-container");
       distanceInput.style("width", "100px");
       
-      distanceButton = createButton("Distance Calculator");
+      distanceButton = createButton("Calculator of Distance (km)");
       distanceButton.parent("table-container");
       distanceButton.mousePressed(() => {
         let dVal = parseFloat(distanceInput.value());
