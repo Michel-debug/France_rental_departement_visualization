@@ -1179,7 +1179,7 @@ function draw() {
     textSize(20);
     textAlign(CENTER, CENTER);
     fill(100);
-    text("Loading data...", width / 2, height / 2);
+    text("Due to the large amount of map data, please wait 20 seconds, Loading data...", width / 2, height / 2);
     return;
   }
   hoveredItem = null;
